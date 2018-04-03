@@ -1,0 +1,76 @@
+// Functions
+@import 'functions/convert-units';
+@import 'functions/str-to-num';
+@import 'functions/str-first-index';
+@import 'functions/str-split';
+@import 'functions/str-trim';
+@import 'functions/str-contains';
+@import 'functions/pi';
+@import 'functions/rad';
+@import 'functions/pow';
+@import 'functions/fact';
+@import 'functions/cos';
+@import 'functions/sin';
+@import 'functions/tan';
+@import 'functions/rotate';
+@import 'functions/rotate-path';
+@import 'functions/rotate-shapes';
+
+// Mixins
+@import 'mixins/vendor-prefix';
+
+// Variables
+@import './_variables';
+
+// $rotated-shapes: ();
+// @each $name, $value in $shapes {
+//   @if str-contains($value, ('polygon')...) {
+//     @each $deg in $rotate-steps {
+//       $unitless: $deg / ($deg * 0 + 1);
+//       $rotated-path: rotate-path($value, $deg, $rotate-origin);
+//       $rotated-shapes: map-merge((
+//         '#{$name}-rotate-#{$unitless}': $rotated-path
+//       ), $rotated-shapes);
+//     }
+//   }
+// }
+
+$shapes: map-merge($shapes, rotate-shapes($shapes, $shape-rotate-steps, $shape-rotate-origin));
+
+/* Properties */
+:root {
+  /* Shapes */
+  @each $name, $value in $shapes {
+    --shape-#{$name}: #{$value};
+  }
+
+  /* Shape spacers */
+  @each $name, $value in $shape-spacers {
+    --shape-spacer-#{$name}: #{$value};
+  }
+}
+
+/* Clips */
+@each $name, $value in $shapes {
+  .clip-#{$name} {
+    @include vendor-prefix(clip-path, var(--shape-#{$name}));
+  }
+}
+
+/* Shapes */
+@each $name, $value in $shapes {
+  .shape-outside-#{$name} {
+    @include vendor-prefix(shape-outside, var(--shape-#{$name}));
+  }
+}
+
+@each $name, $value in $shape-spacers {
+  .shape-margin-#{$name} {
+    @include vendor-prefix(shape-margin, var(--shape-spacer-#{$name}));
+  }
+}
+
+/* Masks */
+.mask {
+  @include vendor-prefix(mask-image, linear-gradient(rgba(0, 0, 0, 1.0), transparent));
+}

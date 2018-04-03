@@ -1,0 +1,9 @@
+@function str-contains($string, $strings...) {
+  @each $value in $strings {
+    $index: str-index($string, $value);
+    @if $index {
+      @return true;
+    }
+  }
+  @return false;
+}

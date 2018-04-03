@@ -1,0 +1,30 @@
+@function rotate-path($path, $angle: 0, $origin: (50%, 50%)) {
+  $points: ();
+  $func-name: str-trim(str-slice($path, 0, str-index($path, '(') - 1));
+  $func-value: str-slice($path, str-index($path, '(') + 1, str-index($path, ')') - 1);
+
+  @if $func-name = 'polygon' {
+    $split-values: str-split($func-value, ',');
+    @each $value in $split-values {
+      $point: str-split(str-trim($value), ' ');
+      $x: nth($point, 1);
+      $y: nth($point, 2);
+      $point: (str-to-num($x), str-to-num($y));
+      $points: append($points, $point, comma);
+    }
+
+    $rotated_points: ();
+
+    @each $point in $points {
+      $rotated-point: rotate(nth($point, 1), nth($point, 2), $angle, $origin);
+      $x: nth($rotated-point, 1);
+      $y: nth($rotated-point, 2);
+      $rotated_points: append($rotated_points, #{$x $y}, comma);
+    }
+
+    @return '#{$func-name}(#{$rotated_points})';
+  }
+
+
+  @return $path;
+}

@@ -1,0 +1,3 @@
+@function tan($angle) {
+  @return sin($angle) / cos($angle);
+}

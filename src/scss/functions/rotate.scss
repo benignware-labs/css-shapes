@@ -1,0 +1,12 @@
+@function rotate($x, $y, $angle: 45deg, $origin: (50%, 50%)) {
+  $cx: nth($origin, 1);
+  $cy: nth($origin, 2);
+  $radians: rad($angle);
+  $cos: cos($radians);
+  $sin: sin($radians);
+  $dx: $x - $cx;
+  $dy: $y - $cy;
+  $nx: ($cos * $dx) + ($sin * $dy) + $cx;
+  $ny: ($cos * $dy) - ($sin * $dx) + $cy;
+  @return ($nx, $ny);
+}
