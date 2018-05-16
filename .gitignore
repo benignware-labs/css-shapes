@@ -26,4 +26,7 @@ jspm_packages/
 
 # Parcel
 .cache
-test/dist
+demo/dist
+
+# Temp
+tmp

@@ -12,19 +12,14 @@
       $point: (str-to-num($x), str-to-num($y));
       $points: append($points, $point, comma);
     }
-
     $rotated_points: ();
-
     @each $point in $points {
       $rotated-point: rotate(nth($point, 1), nth($point, 2), $angle, $origin);
       $x: nth($rotated-point, 1);
       $y: nth($rotated-point, 2);
       $rotated_points: append($rotated_points, #{$x $y}, comma);
     }
-
     @return '#{$func-name}(#{$rotated_points})';
   }
-
-
   @return $path;
 }

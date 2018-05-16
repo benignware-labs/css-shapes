@@ -6,7 +6,7 @@
     "test": "test",
     "start": "./node_modules/parcel-bundler/bin/cli.js ./demo/index.html -d ./demo/dist -p 4321 --open",
     "build": "./node_modules/parcel-bundler/bin/cli.js build ./src/scss/shapes.scss --no-cache",
-    "deploy": "npm run build && gh-pages -d demo/dist"
+    "deploy": "./node_modules/parcel-bundler/bin/cli.js build ./demo/index.html -d ./tmp --public-url '/css-shapes' && gh-pages -d tmp && rm -rf tmp"
   },
   "keywords": [
     "prototype",
@@ -17,6 +17,6 @@
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "node-sass": "^4.8.3",
-    "parcel-bundler": "^1.7.0"
+    "parcel-bundler": "^1.8.2"
   }
 }

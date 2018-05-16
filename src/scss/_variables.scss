@@ -24,16 +24,16 @@ $shapes: map-merge((
 ), $shapes);
 
 // Spacings
-$shape-spacer: 1rem !default;
-$shape-spacers: () !default;
-$shape-spacers: map-merge((
-  0: 0,
-  1: ($shape-spacer * .25),
-  2: ($shape-spacer * .5),
-  3: $shape-spacer,
-  4: ($shape-spacer * 1.5),
-  5: ($shape-spacer * 3)
-), $shape-spacers);
+// $shape-spacer: 1rem !default;
+// $shape-spacers: () !default;
+// $shape-spacers: map-merge((
+//   0: 0,
+//   1: ($shape-spacer * .25),
+//   2: ($shape-spacer * .5),
+//   3: $shape-spacer,
+//   4: ($shape-spacer * 1.5),
+//   5: ($shape-spacer * 3)
+// ), $shape-spacers);
 
 // Rotate
 $shape-rotate-steps: (90deg, 180deg, 270deg) !default;

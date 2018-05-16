@@ -1,6 +1,7 @@
 /* Properties */
 :root {
-  /* Shapes */
+  /* Rotated Shapes */
+  /* CSS Properties */
   --shape-circle: circle(50%);
   --shape-triangle: polygon(50% 0%, 0% 100%, 100% 100%);
   --shape-triangle-orthogonal: polygon(100% 100%, 0 0, 0 100%);
@@ -82,1196 +83,980 @@
   --shape-triangle-rotate-270: polygon(99.99999% 49.99997%, -0.00002% 0.00003%, 0.00003% 100.00002%);
   --shape-triangle-rotate-180: polygon(50.0% 100.0%, 100.0% 0%, 0% 0%);
   --shape-triangle-rotate-90: polygon(0% 50%, 100% 100%, 100% 0%);
-  /* Shape spacers */
-  --shape-spacer-0: 0;
-  --shape-spacer-1: 0.25rem;
-  --shape-spacer-2: 0.5rem;
-  --shape-spacer-3: 1rem;
-  --shape-spacer-4: 1.5rem;
-  --shape-spacer-5: 3rem; }
-
-/* Clips */
-.clip-circle {
-  -webkit-clip-path: var(--shape-circle);
-  -ms-clip-path: var(--shape-circle);
-  -moz-clip-path: var(--shape-circle);
-  -o-clip-path: var(--shape-circle);
-  clip-path: var(--shape-circle); }
-
-.clip-triangle {
-  -webkit-clip-path: var(--shape-triangle);
-  -ms-clip-path: var(--shape-triangle);
-  -moz-clip-path: var(--shape-triangle);
-  -o-clip-path: var(--shape-triangle);
-  clip-path: var(--shape-triangle); }
-
-.clip-triangle-orthogonal {
-  -webkit-clip-path: var(--shape-triangle-orthogonal);
-  -ms-clip-path: var(--shape-triangle-orthogonal);
-  -moz-clip-path: var(--shape-triangle-orthogonal);
-  -o-clip-path: var(--shape-triangle-orthogonal);
-  clip-path: var(--shape-triangle-orthogonal); }
-
-.clip-trapezoid {
-  -webkit-clip-path: var(--shape-trapezoid);
-  -ms-clip-path: var(--shape-trapezoid);
-  -moz-clip-path: var(--shape-trapezoid);
-  -o-clip-path: var(--shape-trapezoid);
-  clip-path: var(--shape-trapezoid); }
-
-.clip-parallelogram {
-  -webkit-clip-path: var(--shape-parallelogram);
-  -ms-clip-path: var(--shape-parallelogram);
-  -moz-clip-path: var(--shape-parallelogram);
-  -o-clip-path: var(--shape-parallelogram);
-  clip-path: var(--shape-parallelogram); }
-
-.clip-rhombus {
-  -webkit-clip-path: var(--shape-rhombus);
-  -ms-clip-path: var(--shape-rhombus);
-  -moz-clip-path: var(--shape-rhombus);
-  -o-clip-path: var(--shape-rhombus);
-  clip-path: var(--shape-rhombus); }
-
-.clip-pentagon {
-  -webkit-clip-path: var(--shape-pentagon);
-  -ms-clip-path: var(--shape-pentagon);
-  -moz-clip-path: var(--shape-pentagon);
-  -o-clip-path: var(--shape-pentagon);
-  clip-path: var(--shape-pentagon); }
-
-.clip-hexagon {
-  -webkit-clip-path: var(--shape-hexagon);
-  -ms-clip-path: var(--shape-hexagon);
-  -moz-clip-path: var(--shape-hexagon);
-  -o-clip-path: var(--shape-hexagon);
-  clip-path: var(--shape-hexagon); }
-
-.clip-heptagon {
-  -webkit-clip-path: var(--shape-heptagon);
-  -ms-clip-path: var(--shape-heptagon);
-  -moz-clip-path: var(--shape-heptagon);
-  -o-clip-path: var(--shape-heptagon);
-  clip-path: var(--shape-heptagon); }
-
-.clip-octagon {
-  -webkit-clip-path: var(--shape-octagon);
-  -ms-clip-path: var(--shape-octagon);
-  -moz-clip-path: var(--shape-octagon);
-  -o-clip-path: var(--shape-octagon);
-  clip-path: var(--shape-octagon); }
-
-.clip-nonagon {
-  -webkit-clip-path: var(--shape-nonagon);
-  -ms-clip-path: var(--shape-nonagon);
-  -moz-clip-path: var(--shape-nonagon);
-  -o-clip-path: var(--shape-nonagon);
-  clip-path: var(--shape-nonagon); }
-
-.clip-decagon {
-  -webkit-clip-path: var(--shape-decagon);
-  -ms-clip-path: var(--shape-decagon);
-  -moz-clip-path: var(--shape-decagon);
-  -o-clip-path: var(--shape-decagon);
-  clip-path: var(--shape-decagon); }
-
-.clip-bevel {
-  -webkit-clip-path: var(--shape-bevel);
-  -ms-clip-path: var(--shape-bevel);
-  -moz-clip-path: var(--shape-bevel);
-  -o-clip-path: var(--shape-bevel);
-  clip-path: var(--shape-bevel); }
-
-.clip-rabbet {
-  -webkit-clip-path: var(--shape-rabbet);
-  -ms-clip-path: var(--shape-rabbet);
-  -moz-clip-path: var(--shape-rabbet);
-  -o-clip-path: var(--shape-rabbet);
-  clip-path: var(--shape-rabbet); }
-
-.clip-arrow-left {
-  -webkit-clip-path: var(--shape-arrow-left);
-  -ms-clip-path: var(--shape-arrow-left);
-  -moz-clip-path: var(--shape-arrow-left);
-  -o-clip-path: var(--shape-arrow-left);
-  clip-path: var(--shape-arrow-left); }
-
-.clip-arrow-right {
-  -webkit-clip-path: var(--shape-arrow-right);
-  -ms-clip-path: var(--shape-arrow-right);
-  -moz-clip-path: var(--shape-arrow-right);
-  -o-clip-path: var(--shape-arrow-right);
-  clip-path: var(--shape-arrow-right); }
-
-.clip-point-left {
-  -webkit-clip-path: var(--shape-point-left);
-  -ms-clip-path: var(--shape-point-left);
-  -moz-clip-path: var(--shape-point-left);
-  -o-clip-path: var(--shape-point-left);
-  clip-path: var(--shape-point-left); }
-
-.clip-point-right {
-  -webkit-clip-path: var(--shape-point-right);
-  -ms-clip-path: var(--shape-point-right);
-  -moz-clip-path: var(--shape-point-right);
-  -o-clip-path: var(--shape-point-right);
-  clip-path: var(--shape-point-right); }
-
-.clip-chevron-left {
-  -webkit-clip-path: var(--shape-chevron-left);
-  -ms-clip-path: var(--shape-chevron-left);
-  -moz-clip-path: var(--shape-chevron-left);
-  -o-clip-path: var(--shape-chevron-left);
-  clip-path: var(--shape-chevron-left); }
-
-.clip-chevron-right {
-  -webkit-clip-path: var(--shape-chevron-right);
-  -ms-clip-path: var(--shape-chevron-right);
-  -moz-clip-path: var(--shape-chevron-right);
-  -o-clip-path: var(--shape-chevron-right);
-  clip-path: var(--shape-chevron-right); }
-
-.clip-star {
-  -webkit-clip-path: var(--shape-star);
-  -ms-clip-path: var(--shape-star);
-  -moz-clip-path: var(--shape-star);
-  -o-clip-path: var(--shape-star);
-  clip-path: var(--shape-star); }
-
-.clip-star-rotate-270 {
-  -webkit-clip-path: var(--shape-star-rotate-270);
-  -ms-clip-path: var(--shape-star-rotate-270);
-  -moz-clip-path: var(--shape-star-rotate-270);
-  -o-clip-path: var(--shape-star-rotate-270);
-  clip-path: var(--shape-star-rotate-270); }
-
-.clip-star-rotate-180 {
-  -webkit-clip-path: var(--shape-star-rotate-180);
-  -ms-clip-path: var(--shape-star-rotate-180);
-  -moz-clip-path: var(--shape-star-rotate-180);
-  -o-clip-path: var(--shape-star-rotate-180);
-  clip-path: var(--shape-star-rotate-180); }
-
-.clip-star-rotate-90 {
-  -webkit-clip-path: var(--shape-star-rotate-90);
-  -ms-clip-path: var(--shape-star-rotate-90);
-  -moz-clip-path: var(--shape-star-rotate-90);
-  -o-clip-path: var(--shape-star-rotate-90);
-  clip-path: var(--shape-star-rotate-90); }
-
-.clip-chevron-right-rotate-270 {
-  -webkit-clip-path: var(--shape-chevron-right-rotate-270);
-  -ms-clip-path: var(--shape-chevron-right-rotate-270);
-  -moz-clip-path: var(--shape-chevron-right-rotate-270);
-  -o-clip-path: var(--shape-chevron-right-rotate-270);
-  clip-path: var(--shape-chevron-right-rotate-270); }
-
-.clip-chevron-right-rotate-180 {
-  -webkit-clip-path: var(--shape-chevron-right-rotate-180);
-  -ms-clip-path: var(--shape-chevron-right-rotate-180);
-  -moz-clip-path: var(--shape-chevron-right-rotate-180);
-  -o-clip-path: var(--shape-chevron-right-rotate-180);
-  clip-path: var(--shape-chevron-right-rotate-180); }
-
-.clip-chevron-right-rotate-90 {
-  -webkit-clip-path: var(--shape-chevron-right-rotate-90);
-  -ms-clip-path: var(--shape-chevron-right-rotate-90);
-  -moz-clip-path: var(--shape-chevron-right-rotate-90);
-  -o-clip-path: var(--shape-chevron-right-rotate-90);
-  clip-path: var(--shape-chevron-right-rotate-90); }
-
-.clip-chevron-left-rotate-270 {
-  -webkit-clip-path: var(--shape-chevron-left-rotate-270);
-  -ms-clip-path: var(--shape-chevron-left-rotate-270);
-  -moz-clip-path: var(--shape-chevron-left-rotate-270);
-  -o-clip-path: var(--shape-chevron-left-rotate-270);
-  clip-path: var(--shape-chevron-left-rotate-270); }
-
-.clip-chevron-left-rotate-180 {
-  -webkit-clip-path: var(--shape-chevron-left-rotate-180);
-  -ms-clip-path: var(--shape-chevron-left-rotate-180);
-  -moz-clip-path: var(--shape-chevron-left-rotate-180);
-  -o-clip-path: var(--shape-chevron-left-rotate-180);
-  clip-path: var(--shape-chevron-left-rotate-180); }
-
-.clip-chevron-left-rotate-90 {
-  -webkit-clip-path: var(--shape-chevron-left-rotate-90);
-  -ms-clip-path: var(--shape-chevron-left-rotate-90);
-  -moz-clip-path: var(--shape-chevron-left-rotate-90);
-  -o-clip-path: var(--shape-chevron-left-rotate-90);
-  clip-path: var(--shape-chevron-left-rotate-90); }
-
-.clip-point-right-rotate-270 {
-  -webkit-clip-path: var(--shape-point-right-rotate-270);
-  -ms-clip-path: var(--shape-point-right-rotate-270);
-  -moz-clip-path: var(--shape-point-right-rotate-270);
-  -o-clip-path: var(--shape-point-right-rotate-270);
-  clip-path: var(--shape-point-right-rotate-270); }
-
-.clip-point-right-rotate-180 {
-  -webkit-clip-path: var(--shape-point-right-rotate-180);
-  -ms-clip-path: var(--shape-point-right-rotate-180);
-  -moz-clip-path: var(--shape-point-right-rotate-180);
-  -o-clip-path: var(--shape-point-right-rotate-180);
-  clip-path: var(--shape-point-right-rotate-180); }
-
-.clip-point-right-rotate-90 {
-  -webkit-clip-path: var(--shape-point-right-rotate-90);
-  -ms-clip-path: var(--shape-point-right-rotate-90);
-  -moz-clip-path: var(--shape-point-right-rotate-90);
-  -o-clip-path: var(--shape-point-right-rotate-90);
-  clip-path: var(--shape-point-right-rotate-90); }
-
-.clip-point-left-rotate-270 {
-  -webkit-clip-path: var(--shape-point-left-rotate-270);
-  -ms-clip-path: var(--shape-point-left-rotate-270);
-  -moz-clip-path: var(--shape-point-left-rotate-270);
-  -o-clip-path: var(--shape-point-left-rotate-270);
-  clip-path: var(--shape-point-left-rotate-270); }
-
-.clip-point-left-rotate-180 {
-  -webkit-clip-path: var(--shape-point-left-rotate-180);
-  -ms-clip-path: var(--shape-point-left-rotate-180);
-  -moz-clip-path: var(--shape-point-left-rotate-180);
-  -o-clip-path: var(--shape-point-left-rotate-180);
-  clip-path: var(--shape-point-left-rotate-180); }
-
-.clip-point-left-rotate-90 {
-  -webkit-clip-path: var(--shape-point-left-rotate-90);
-  -ms-clip-path: var(--shape-point-left-rotate-90);
-  -moz-clip-path: var(--shape-point-left-rotate-90);
-  -o-clip-path: var(--shape-point-left-rotate-90);
-  clip-path: var(--shape-point-left-rotate-90); }
-
-.clip-arrow-right-rotate-270 {
-  -webkit-clip-path: var(--shape-arrow-right-rotate-270);
-  -ms-clip-path: var(--shape-arrow-right-rotate-270);
-  -moz-clip-path: var(--shape-arrow-right-rotate-270);
-  -o-clip-path: var(--shape-arrow-right-rotate-270);
-  clip-path: var(--shape-arrow-right-rotate-270); }
-
-.clip-arrow-right-rotate-180 {
-  -webkit-clip-path: var(--shape-arrow-right-rotate-180);
-  -ms-clip-path: var(--shape-arrow-right-rotate-180);
-  -moz-clip-path: var(--shape-arrow-right-rotate-180);
-  -o-clip-path: var(--shape-arrow-right-rotate-180);
-  clip-path: var(--shape-arrow-right-rotate-180); }
-
-.clip-arrow-right-rotate-90 {
-  -webkit-clip-path: var(--shape-arrow-right-rotate-90);
-  -ms-clip-path: var(--shape-arrow-right-rotate-90);
-  -moz-clip-path: var(--shape-arrow-right-rotate-90);
-  -o-clip-path: var(--shape-arrow-right-rotate-90);
-  clip-path: var(--shape-arrow-right-rotate-90); }
-
-.clip-arrow-left-rotate-270 {
-  -webkit-clip-path: var(--shape-arrow-left-rotate-270);
-  -ms-clip-path: var(--shape-arrow-left-rotate-270);
-  -moz-clip-path: var(--shape-arrow-left-rotate-270);
-  -o-clip-path: var(--shape-arrow-left-rotate-270);
-  clip-path: var(--shape-arrow-left-rotate-270); }
-
-.clip-arrow-left-rotate-180 {
-  -webkit-clip-path: var(--shape-arrow-left-rotate-180);
-  -ms-clip-path: var(--shape-arrow-left-rotate-180);
-  -moz-clip-path: var(--shape-arrow-left-rotate-180);
-  -o-clip-path: var(--shape-arrow-left-rotate-180);
-  clip-path: var(--shape-arrow-left-rotate-180); }
-
-.clip-arrow-left-rotate-90 {
-  -webkit-clip-path: var(--shape-arrow-left-rotate-90);
-  -ms-clip-path: var(--shape-arrow-left-rotate-90);
-  -moz-clip-path: var(--shape-arrow-left-rotate-90);
-  -o-clip-path: var(--shape-arrow-left-rotate-90);
-  clip-path: var(--shape-arrow-left-rotate-90); }
-
-.clip-rabbet-rotate-270 {
-  -webkit-clip-path: var(--shape-rabbet-rotate-270);
-  -ms-clip-path: var(--shape-rabbet-rotate-270);
-  -moz-clip-path: var(--shape-rabbet-rotate-270);
-  -o-clip-path: var(--shape-rabbet-rotate-270);
-  clip-path: var(--shape-rabbet-rotate-270); }
-
-.clip-rabbet-rotate-180 {
-  -webkit-clip-path: var(--shape-rabbet-rotate-180);
-  -ms-clip-path: var(--shape-rabbet-rotate-180);
-  -moz-clip-path: var(--shape-rabbet-rotate-180);
-  -o-clip-path: var(--shape-rabbet-rotate-180);
-  clip-path: var(--shape-rabbet-rotate-180); }
-
-.clip-rabbet-rotate-90 {
-  -webkit-clip-path: var(--shape-rabbet-rotate-90);
-  -ms-clip-path: var(--shape-rabbet-rotate-90);
-  -moz-clip-path: var(--shape-rabbet-rotate-90);
-  -o-clip-path: var(--shape-rabbet-rotate-90);
-  clip-path: var(--shape-rabbet-rotate-90); }
-
-.clip-bevel-rotate-270 {
-  -webkit-clip-path: var(--shape-bevel-rotate-270);
-  -ms-clip-path: var(--shape-bevel-rotate-270);
-  -moz-clip-path: var(--shape-bevel-rotate-270);
-  -o-clip-path: var(--shape-bevel-rotate-270);
-  clip-path: var(--shape-bevel-rotate-270); }
-
-.clip-bevel-rotate-180 {
-  -webkit-clip-path: var(--shape-bevel-rotate-180);
-  -ms-clip-path: var(--shape-bevel-rotate-180);
-  -moz-clip-path: var(--shape-bevel-rotate-180);
-  -o-clip-path: var(--shape-bevel-rotate-180);
-  clip-path: var(--shape-bevel-rotate-180); }
-
-.clip-bevel-rotate-90 {
-  -webkit-clip-path: var(--shape-bevel-rotate-90);
-  -ms-clip-path: var(--shape-bevel-rotate-90);
-  -moz-clip-path: var(--shape-bevel-rotate-90);
-  -o-clip-path: var(--shape-bevel-rotate-90);
-  clip-path: var(--shape-bevel-rotate-90); }
-
-.clip-decagon-rotate-270 {
-  -webkit-clip-path: var(--shape-decagon-rotate-270);
-  -ms-clip-path: var(--shape-decagon-rotate-270);
-  -moz-clip-path: var(--shape-decagon-rotate-270);
-  -o-clip-path: var(--shape-decagon-rotate-270);
-  clip-path: var(--shape-decagon-rotate-270); }
-
-.clip-decagon-rotate-180 {
-  -webkit-clip-path: var(--shape-decagon-rotate-180);
-  -ms-clip-path: var(--shape-decagon-rotate-180);
-  -moz-clip-path: var(--shape-decagon-rotate-180);
-  -o-clip-path: var(--shape-decagon-rotate-180);
-  clip-path: var(--shape-decagon-rotate-180); }
-
-.clip-decagon-rotate-90 {
-  -webkit-clip-path: var(--shape-decagon-rotate-90);
-  -ms-clip-path: var(--shape-decagon-rotate-90);
-  -moz-clip-path: var(--shape-decagon-rotate-90);
-  -o-clip-path: var(--shape-decagon-rotate-90);
-  clip-path: var(--shape-decagon-rotate-90); }
-
-.clip-nonagon-rotate-270 {
-  -webkit-clip-path: var(--shape-nonagon-rotate-270);
-  -ms-clip-path: var(--shape-nonagon-rotate-270);
-  -moz-clip-path: var(--shape-nonagon-rotate-270);
-  -o-clip-path: var(--shape-nonagon-rotate-270);
-  clip-path: var(--shape-nonagon-rotate-270); }
-
-.clip-nonagon-rotate-180 {
-  -webkit-clip-path: var(--shape-nonagon-rotate-180);
-  -ms-clip-path: var(--shape-nonagon-rotate-180);
-  -moz-clip-path: var(--shape-nonagon-rotate-180);
-  -o-clip-path: var(--shape-nonagon-rotate-180);
-  clip-path: var(--shape-nonagon-rotate-180); }
-
-.clip-nonagon-rotate-90 {
-  -webkit-clip-path: var(--shape-nonagon-rotate-90);
-  -ms-clip-path: var(--shape-nonagon-rotate-90);
-  -moz-clip-path: var(--shape-nonagon-rotate-90);
-  -o-clip-path: var(--shape-nonagon-rotate-90);
-  clip-path: var(--shape-nonagon-rotate-90); }
-
-.clip-octagon-rotate-270 {
-  -webkit-clip-path: var(--shape-octagon-rotate-270);
-  -ms-clip-path: var(--shape-octagon-rotate-270);
-  -moz-clip-path: var(--shape-octagon-rotate-270);
-  -o-clip-path: var(--shape-octagon-rotate-270);
-  clip-path: var(--shape-octagon-rotate-270); }
-
-.clip-octagon-rotate-180 {
-  -webkit-clip-path: var(--shape-octagon-rotate-180);
-  -ms-clip-path: var(--shape-octagon-rotate-180);
-  -moz-clip-path: var(--shape-octagon-rotate-180);
-  -o-clip-path: var(--shape-octagon-rotate-180);
-  clip-path: var(--shape-octagon-rotate-180); }
-
-.clip-octagon-rotate-90 {
-  -webkit-clip-path: var(--shape-octagon-rotate-90);
-  -ms-clip-path: var(--shape-octagon-rotate-90);
-  -moz-clip-path: var(--shape-octagon-rotate-90);
-  -o-clip-path: var(--shape-octagon-rotate-90);
-  clip-path: var(--shape-octagon-rotate-90); }
-
-.clip-heptagon-rotate-270 {
-  -webkit-clip-path: var(--shape-heptagon-rotate-270);
-  -ms-clip-path: var(--shape-heptagon-rotate-270);
-  -moz-clip-path: var(--shape-heptagon-rotate-270);
-  -o-clip-path: var(--shape-heptagon-rotate-270);
-  clip-path: var(--shape-heptagon-rotate-270); }
-
-.clip-heptagon-rotate-180 {
-  -webkit-clip-path: var(--shape-heptagon-rotate-180);
-  -ms-clip-path: var(--shape-heptagon-rotate-180);
-  -moz-clip-path: var(--shape-heptagon-rotate-180);
-  -o-clip-path: var(--shape-heptagon-rotate-180);
-  clip-path: var(--shape-heptagon-rotate-180); }
-
-.clip-heptagon-rotate-90 {
-  -webkit-clip-path: var(--shape-heptagon-rotate-90);
-  -ms-clip-path: var(--shape-heptagon-rotate-90);
-  -moz-clip-path: var(--shape-heptagon-rotate-90);
-  -o-clip-path: var(--shape-heptagon-rotate-90);
-  clip-path: var(--shape-heptagon-rotate-90); }
-
-.clip-hexagon-rotate-270 {
-  -webkit-clip-path: var(--shape-hexagon-rotate-270);
-  -ms-clip-path: var(--shape-hexagon-rotate-270);
-  -moz-clip-path: var(--shape-hexagon-rotate-270);
-  -o-clip-path: var(--shape-hexagon-rotate-270);
-  clip-path: var(--shape-hexagon-rotate-270); }
-
-.clip-hexagon-rotate-180 {
-  -webkit-clip-path: var(--shape-hexagon-rotate-180);
-  -ms-clip-path: var(--shape-hexagon-rotate-180);
-  -moz-clip-path: var(--shape-hexagon-rotate-180);
-  -o-clip-path: var(--shape-hexagon-rotate-180);
-  clip-path: var(--shape-hexagon-rotate-180); }
-
-.clip-hexagon-rotate-90 {
-  -webkit-clip-path: var(--shape-hexagon-rotate-90);
-  -ms-clip-path: var(--shape-hexagon-rotate-90);
-  -moz-clip-path: var(--shape-hexagon-rotate-90);
-  -o-clip-path: var(--shape-hexagon-rotate-90);
-  clip-path: var(--shape-hexagon-rotate-90); }
-
-.clip-pentagon-rotate-270 {
-  -webkit-clip-path: var(--shape-pentagon-rotate-270);
-  -ms-clip-path: var(--shape-pentagon-rotate-270);
-  -moz-clip-path: var(--shape-pentagon-rotate-270);
-  -o-clip-path: var(--shape-pentagon-rotate-270);
-  clip-path: var(--shape-pentagon-rotate-270); }
-
-.clip-pentagon-rotate-180 {
-  -webkit-clip-path: var(--shape-pentagon-rotate-180);
-  -ms-clip-path: var(--shape-pentagon-rotate-180);
-  -moz-clip-path: var(--shape-pentagon-rotate-180);
-  -o-clip-path: var(--shape-pentagon-rotate-180);
-  clip-path: var(--shape-pentagon-rotate-180); }
-
-.clip-pentagon-rotate-90 {
-  -webkit-clip-path: var(--shape-pentagon-rotate-90);
-  -ms-clip-path: var(--shape-pentagon-rotate-90);
-  -moz-clip-path: var(--shape-pentagon-rotate-90);
-  -o-clip-path: var(--shape-pentagon-rotate-90);
-  clip-path: var(--shape-pentagon-rotate-90); }
-
-.clip-rhombus-rotate-270 {
-  -webkit-clip-path: var(--shape-rhombus-rotate-270);
-  -ms-clip-path: var(--shape-rhombus-rotate-270);
-  -moz-clip-path: var(--shape-rhombus-rotate-270);
-  -o-clip-path: var(--shape-rhombus-rotate-270);
-  clip-path: var(--shape-rhombus-rotate-270); }
-
-.clip-rhombus-rotate-180 {
-  -webkit-clip-path: var(--shape-rhombus-rotate-180);
-  -ms-clip-path: var(--shape-rhombus-rotate-180);
-  -moz-clip-path: var(--shape-rhombus-rotate-180);
-  -o-clip-path: var(--shape-rhombus-rotate-180);
-  clip-path: var(--shape-rhombus-rotate-180); }
-
-.clip-rhombus-rotate-90 {
-  -webkit-clip-path: var(--shape-rhombus-rotate-90);
-  -ms-clip-path: var(--shape-rhombus-rotate-90);
-  -moz-clip-path: var(--shape-rhombus-rotate-90);
-  -o-clip-path: var(--shape-rhombus-rotate-90);
-  clip-path: var(--shape-rhombus-rotate-90); }
-
-.clip-parallelogram-rotate-270 {
-  -webkit-clip-path: var(--shape-parallelogram-rotate-270);
-  -ms-clip-path: var(--shape-parallelogram-rotate-270);
-  -moz-clip-path: var(--shape-parallelogram-rotate-270);
-  -o-clip-path: var(--shape-parallelogram-rotate-270);
-  clip-path: var(--shape-parallelogram-rotate-270); }
-
-.clip-parallelogram-rotate-180 {
-  -webkit-clip-path: var(--shape-parallelogram-rotate-180);
-  -ms-clip-path: var(--shape-parallelogram-rotate-180);
-  -moz-clip-path: var(--shape-parallelogram-rotate-180);
-  -o-clip-path: var(--shape-parallelogram-rotate-180);
-  clip-path: var(--shape-parallelogram-rotate-180); }
-
-.clip-parallelogram-rotate-90 {
-  -webkit-clip-path: var(--shape-parallelogram-rotate-90);
-  -ms-clip-path: var(--shape-parallelogram-rotate-90);
-  -moz-clip-path: var(--shape-parallelogram-rotate-90);
-  -o-clip-path: var(--shape-parallelogram-rotate-90);
-  clip-path: var(--shape-parallelogram-rotate-90); }
-
-.clip-trapezoid-rotate-270 {
-  -webkit-clip-path: var(--shape-trapezoid-rotate-270);
-  -ms-clip-path: var(--shape-trapezoid-rotate-270);
-  -moz-clip-path: var(--shape-trapezoid-rotate-270);
-  -o-clip-path: var(--shape-trapezoid-rotate-270);
-  clip-path: var(--shape-trapezoid-rotate-270); }
-
-.clip-trapezoid-rotate-180 {
-  -webkit-clip-path: var(--shape-trapezoid-rotate-180);
-  -ms-clip-path: var(--shape-trapezoid-rotate-180);
-  -moz-clip-path: var(--shape-trapezoid-rotate-180);
-  -o-clip-path: var(--shape-trapezoid-rotate-180);
-  clip-path: var(--shape-trapezoid-rotate-180); }
-
-.clip-trapezoid-rotate-90 {
-  -webkit-clip-path: var(--shape-trapezoid-rotate-90);
-  -ms-clip-path: var(--shape-trapezoid-rotate-90);
-  -moz-clip-path: var(--shape-trapezoid-rotate-90);
-  -o-clip-path: var(--shape-trapezoid-rotate-90);
-  clip-path: var(--shape-trapezoid-rotate-90); }
-
-.clip-triangle-orthogonal-rotate-270 {
-  -webkit-clip-path: var(--shape-triangle-orthogonal-rotate-270);
-  -ms-clip-path: var(--shape-triangle-orthogonal-rotate-270);
-  -moz-clip-path: var(--shape-triangle-orthogonal-rotate-270);
-  -o-clip-path: var(--shape-triangle-orthogonal-rotate-270);
-  clip-path: var(--shape-triangle-orthogonal-rotate-270); }
-
-.clip-triangle-orthogonal-rotate-180 {
-  -webkit-clip-path: var(--shape-triangle-orthogonal-rotate-180);
-  -ms-clip-path: var(--shape-triangle-orthogonal-rotate-180);
-  -moz-clip-path: var(--shape-triangle-orthogonal-rotate-180);
-  -o-clip-path: var(--shape-triangle-orthogonal-rotate-180);
-  clip-path: var(--shape-triangle-orthogonal-rotate-180); }
-
-.clip-triangle-orthogonal-rotate-90 {
-  -webkit-clip-path: var(--shape-triangle-orthogonal-rotate-90);
-  -ms-clip-path: var(--shape-triangle-orthogonal-rotate-90);
-  -moz-clip-path: var(--shape-triangle-orthogonal-rotate-90);
-  -o-clip-path: var(--shape-triangle-orthogonal-rotate-90);
-  clip-path: var(--shape-triangle-orthogonal-rotate-90); }
-
-.clip-triangle-rotate-270 {
-  -webkit-clip-path: var(--shape-triangle-rotate-270);
-  -ms-clip-path: var(--shape-triangle-rotate-270);
-  -moz-clip-path: var(--shape-triangle-rotate-270);
-  -o-clip-path: var(--shape-triangle-rotate-270);
-  clip-path: var(--shape-triangle-rotate-270); }
-
-.clip-triangle-rotate-180 {
-  -webkit-clip-path: var(--shape-triangle-rotate-180);
-  -ms-clip-path: var(--shape-triangle-rotate-180);
-  -moz-clip-path: var(--shape-triangle-rotate-180);
-  -o-clip-path: var(--shape-triangle-rotate-180);
-  clip-path: var(--shape-triangle-rotate-180); }
-
-.clip-triangle-rotate-90 {
-  -webkit-clip-path: var(--shape-triangle-rotate-90);
-  -ms-clip-path: var(--shape-triangle-rotate-90);
-  -moz-clip-path: var(--shape-triangle-rotate-90);
-  -o-clip-path: var(--shape-triangle-rotate-90);
-  clip-path: var(--shape-triangle-rotate-90); }
-
-/* Shapes */
-.shape-outside-circle {
-  -webkit-shape-outside: var(--shape-circle);
-  -ms-shape-outside: var(--shape-circle);
-  -moz-shape-outside: var(--shape-circle);
-  -o-shape-outside: var(--shape-circle);
-  shape-outside: var(--shape-circle); }
-
-.shape-outside-triangle {
-  -webkit-shape-outside: var(--shape-triangle);
-  -ms-shape-outside: var(--shape-triangle);
-  -moz-shape-outside: var(--shape-triangle);
-  -o-shape-outside: var(--shape-triangle);
-  shape-outside: var(--shape-triangle); }
-
-.shape-outside-triangle-orthogonal {
-  -webkit-shape-outside: var(--shape-triangle-orthogonal);
-  -ms-shape-outside: var(--shape-triangle-orthogonal);
-  -moz-shape-outside: var(--shape-triangle-orthogonal);
-  -o-shape-outside: var(--shape-triangle-orthogonal);
-  shape-outside: var(--shape-triangle-orthogonal); }
-
-.shape-outside-trapezoid {
-  -webkit-shape-outside: var(--shape-trapezoid);
-  -ms-shape-outside: var(--shape-trapezoid);
-  -moz-shape-outside: var(--shape-trapezoid);
-  -o-shape-outside: var(--shape-trapezoid);
-  shape-outside: var(--shape-trapezoid); }
-
-.shape-outside-parallelogram {
-  -webkit-shape-outside: var(--shape-parallelogram);
-  -ms-shape-outside: var(--shape-parallelogram);
-  -moz-shape-outside: var(--shape-parallelogram);
-  -o-shape-outside: var(--shape-parallelogram);
-  shape-outside: var(--shape-parallelogram); }
-
-.shape-outside-rhombus {
-  -webkit-shape-outside: var(--shape-rhombus);
-  -ms-shape-outside: var(--shape-rhombus);
-  -moz-shape-outside: var(--shape-rhombus);
-  -o-shape-outside: var(--shape-rhombus);
-  shape-outside: var(--shape-rhombus); }
-
-.shape-outside-pentagon {
-  -webkit-shape-outside: var(--shape-pentagon);
-  -ms-shape-outside: var(--shape-pentagon);
-  -moz-shape-outside: var(--shape-pentagon);
-  -o-shape-outside: var(--shape-pentagon);
-  shape-outside: var(--shape-pentagon); }
-
-.shape-outside-hexagon {
-  -webkit-shape-outside: var(--shape-hexagon);
-  -ms-shape-outside: var(--shape-hexagon);
-  -moz-shape-outside: var(--shape-hexagon);
-  -o-shape-outside: var(--shape-hexagon);
-  shape-outside: var(--shape-hexagon); }
-
-.shape-outside-heptagon {
-  -webkit-shape-outside: var(--shape-heptagon);
-  -ms-shape-outside: var(--shape-heptagon);
-  -moz-shape-outside: var(--shape-heptagon);
-  -o-shape-outside: var(--shape-heptagon);
-  shape-outside: var(--shape-heptagon); }
-
-.shape-outside-octagon {
-  -webkit-shape-outside: var(--shape-octagon);
-  -ms-shape-outside: var(--shape-octagon);
-  -moz-shape-outside: var(--shape-octagon);
-  -o-shape-outside: var(--shape-octagon);
-  shape-outside: var(--shape-octagon); }
-
-.shape-outside-nonagon {
-  -webkit-shape-outside: var(--shape-nonagon);
-  -ms-shape-outside: var(--shape-nonagon);
-  -moz-shape-outside: var(--shape-nonagon);
-  -o-shape-outside: var(--shape-nonagon);
-  shape-outside: var(--shape-nonagon); }
-
-.shape-outside-decagon {
-  -webkit-shape-outside: var(--shape-decagon);
-  -ms-shape-outside: var(--shape-decagon);
-  -moz-shape-outside: var(--shape-decagon);
-  -o-shape-outside: var(--shape-decagon);
-  shape-outside: var(--shape-decagon); }
-
-.shape-outside-bevel {
-  -webkit-shape-outside: var(--shape-bevel);
-  -ms-shape-outside: var(--shape-bevel);
-  -moz-shape-outside: var(--shape-bevel);
-  -o-shape-outside: var(--shape-bevel);
-  shape-outside: var(--shape-bevel); }
-
-.shape-outside-rabbet {
-  -webkit-shape-outside: var(--shape-rabbet);
-  -ms-shape-outside: var(--shape-rabbet);
-  -moz-shape-outside: var(--shape-rabbet);
-  -o-shape-outside: var(--shape-rabbet);
-  shape-outside: var(--shape-rabbet); }
-
-.shape-outside-arrow-left {
-  -webkit-shape-outside: var(--shape-arrow-left);
-  -ms-shape-outside: var(--shape-arrow-left);
-  -moz-shape-outside: var(--shape-arrow-left);
-  -o-shape-outside: var(--shape-arrow-left);
-  shape-outside: var(--shape-arrow-left); }
-
-.shape-outside-arrow-right {
-  -webkit-shape-outside: var(--shape-arrow-right);
-  -ms-shape-outside: var(--shape-arrow-right);
-  -moz-shape-outside: var(--shape-arrow-right);
-  -o-shape-outside: var(--shape-arrow-right);
-  shape-outside: var(--shape-arrow-right); }
-
-.shape-outside-point-left {
-  -webkit-shape-outside: var(--shape-point-left);
-  -ms-shape-outside: var(--shape-point-left);
-  -moz-shape-outside: var(--shape-point-left);
-  -o-shape-outside: var(--shape-point-left);
-  shape-outside: var(--shape-point-left); }
-
-.shape-outside-point-right {
-  -webkit-shape-outside: var(--shape-point-right);
-  -ms-shape-outside: var(--shape-point-right);
-  -moz-shape-outside: var(--shape-point-right);
-  -o-shape-outside: var(--shape-point-right);
-  shape-outside: var(--shape-point-right); }
-
-.shape-outside-chevron-left {
-  -webkit-shape-outside: var(--shape-chevron-left);
-  -ms-shape-outside: var(--shape-chevron-left);
-  -moz-shape-outside: var(--shape-chevron-left);
-  -o-shape-outside: var(--shape-chevron-left);
-  shape-outside: var(--shape-chevron-left); }
-
-.shape-outside-chevron-right {
-  -webkit-shape-outside: var(--shape-chevron-right);
-  -ms-shape-outside: var(--shape-chevron-right);
-  -moz-shape-outside: var(--shape-chevron-right);
-  -o-shape-outside: var(--shape-chevron-right);
-  shape-outside: var(--shape-chevron-right); }
-
-.shape-outside-star {
-  -webkit-shape-outside: var(--shape-star);
-  -ms-shape-outside: var(--shape-star);
-  -moz-shape-outside: var(--shape-star);
-  -o-shape-outside: var(--shape-star);
-  shape-outside: var(--shape-star); }
-
-.shape-outside-star-rotate-270 {
-  -webkit-shape-outside: var(--shape-star-rotate-270);
-  -ms-shape-outside: var(--shape-star-rotate-270);
-  -moz-shape-outside: var(--shape-star-rotate-270);
-  -o-shape-outside: var(--shape-star-rotate-270);
-  shape-outside: var(--shape-star-rotate-270); }
-
-.shape-outside-star-rotate-180 {
-  -webkit-shape-outside: var(--shape-star-rotate-180);
-  -ms-shape-outside: var(--shape-star-rotate-180);
-  -moz-shape-outside: var(--shape-star-rotate-180);
-  -o-shape-outside: var(--shape-star-rotate-180);
-  shape-outside: var(--shape-star-rotate-180); }
-
-.shape-outside-star-rotate-90 {
-  -webkit-shape-outside: var(--shape-star-rotate-90);
-  -ms-shape-outside: var(--shape-star-rotate-90);
-  -moz-shape-outside: var(--shape-star-rotate-90);
-  -o-shape-outside: var(--shape-star-rotate-90);
-  shape-outside: var(--shape-star-rotate-90); }
-
-.shape-outside-chevron-right-rotate-270 {
-  -webkit-shape-outside: var(--shape-chevron-right-rotate-270);
-  -ms-shape-outside: var(--shape-chevron-right-rotate-270);
-  -moz-shape-outside: var(--shape-chevron-right-rotate-270);
-  -o-shape-outside: var(--shape-chevron-right-rotate-270);
-  shape-outside: var(--shape-chevron-right-rotate-270); }
-
-.shape-outside-chevron-right-rotate-180 {
-  -webkit-shape-outside: var(--shape-chevron-right-rotate-180);
-  -ms-shape-outside: var(--shape-chevron-right-rotate-180);
-  -moz-shape-outside: var(--shape-chevron-right-rotate-180);
-  -o-shape-outside: var(--shape-chevron-right-rotate-180);
-  shape-outside: var(--shape-chevron-right-rotate-180); }
-
-.shape-outside-chevron-right-rotate-90 {
-  -webkit-shape-outside: var(--shape-chevron-right-rotate-90);
-  -ms-shape-outside: var(--shape-chevron-right-rotate-90);
-  -moz-shape-outside: var(--shape-chevron-right-rotate-90);
-  -o-shape-outside: var(--shape-chevron-right-rotate-90);
-  shape-outside: var(--shape-chevron-right-rotate-90); }
-
-.shape-outside-chevron-left-rotate-270 {
-  -webkit-shape-outside: var(--shape-chevron-left-rotate-270);
-  -ms-shape-outside: var(--shape-chevron-left-rotate-270);
-  -moz-shape-outside: var(--shape-chevron-left-rotate-270);
-  -o-shape-outside: var(--shape-chevron-left-rotate-270);
-  shape-outside: var(--shape-chevron-left-rotate-270); }
-
-.shape-outside-chevron-left-rotate-180 {
-  -webkit-shape-outside: var(--shape-chevron-left-rotate-180);
-  -ms-shape-outside: var(--shape-chevron-left-rotate-180);
-  -moz-shape-outside: var(--shape-chevron-left-rotate-180);
-  -o-shape-outside: var(--shape-chevron-left-rotate-180);
-  shape-outside: var(--shape-chevron-left-rotate-180); }
-
-.shape-outside-chevron-left-rotate-90 {
-  -webkit-shape-outside: var(--shape-chevron-left-rotate-90);
-  -ms-shape-outside: var(--shape-chevron-left-rotate-90);
-  -moz-shape-outside: var(--shape-chevron-left-rotate-90);
-  -o-shape-outside: var(--shape-chevron-left-rotate-90);
-  shape-outside: var(--shape-chevron-left-rotate-90); }
-
-.shape-outside-point-right-rotate-270 {
-  -webkit-shape-outside: var(--shape-point-right-rotate-270);
-  -ms-shape-outside: var(--shape-point-right-rotate-270);
-  -moz-shape-outside: var(--shape-point-right-rotate-270);
-  -o-shape-outside: var(--shape-point-right-rotate-270);
-  shape-outside: var(--shape-point-right-rotate-270); }
-
-.shape-outside-point-right-rotate-180 {
-  -webkit-shape-outside: var(--shape-point-right-rotate-180);
-  -ms-shape-outside: var(--shape-point-right-rotate-180);
-  -moz-shape-outside: var(--shape-point-right-rotate-180);
-  -o-shape-outside: var(--shape-point-right-rotate-180);
-  shape-outside: var(--shape-point-right-rotate-180); }
-
-.shape-outside-point-right-rotate-90 {
-  -webkit-shape-outside: var(--shape-point-right-rotate-90);
-  -ms-shape-outside: var(--shape-point-right-rotate-90);
-  -moz-shape-outside: var(--shape-point-right-rotate-90);
-  -o-shape-outside: var(--shape-point-right-rotate-90);
-  shape-outside: var(--shape-point-right-rotate-90); }
-
-.shape-outside-point-left-rotate-270 {
-  -webkit-shape-outside: var(--shape-point-left-rotate-270);
-  -ms-shape-outside: var(--shape-point-left-rotate-270);
-  -moz-shape-outside: var(--shape-point-left-rotate-270);
-  -o-shape-outside: var(--shape-point-left-rotate-270);
-  shape-outside: var(--shape-point-left-rotate-270); }
-
-.shape-outside-point-left-rotate-180 {
-  -webkit-shape-outside: var(--shape-point-left-rotate-180);
-  -ms-shape-outside: var(--shape-point-left-rotate-180);
-  -moz-shape-outside: var(--shape-point-left-rotate-180);
-  -o-shape-outside: var(--shape-point-left-rotate-180);
-  shape-outside: var(--shape-point-left-rotate-180); }
-
-.shape-outside-point-left-rotate-90 {
-  -webkit-shape-outside: var(--shape-point-left-rotate-90);
-  -ms-shape-outside: var(--shape-point-left-rotate-90);
-  -moz-shape-outside: var(--shape-point-left-rotate-90);
-  -o-shape-outside: var(--shape-point-left-rotate-90);
-  shape-outside: var(--shape-point-left-rotate-90); }
-
-.shape-outside-arrow-right-rotate-270 {
-  -webkit-shape-outside: var(--shape-arrow-right-rotate-270);
-  -ms-shape-outside: var(--shape-arrow-right-rotate-270);
-  -moz-shape-outside: var(--shape-arrow-right-rotate-270);
-  -o-shape-outside: var(--shape-arrow-right-rotate-270);
-  shape-outside: var(--shape-arrow-right-rotate-270); }
-
-.shape-outside-arrow-right-rotate-180 {
-  -webkit-shape-outside: var(--shape-arrow-right-rotate-180);
-  -ms-shape-outside: var(--shape-arrow-right-rotate-180);
-  -moz-shape-outside: var(--shape-arrow-right-rotate-180);
-  -o-shape-outside: var(--shape-arrow-right-rotate-180);
-  shape-outside: var(--shape-arrow-right-rotate-180); }
-
-.shape-outside-arrow-right-rotate-90 {
-  -webkit-shape-outside: var(--shape-arrow-right-rotate-90);
-  -ms-shape-outside: var(--shape-arrow-right-rotate-90);
-  -moz-shape-outside: var(--shape-arrow-right-rotate-90);
-  -o-shape-outside: var(--shape-arrow-right-rotate-90);
-  shape-outside: var(--shape-arrow-right-rotate-90); }
-
-.shape-outside-arrow-left-rotate-270 {
-  -webkit-shape-outside: var(--shape-arrow-left-rotate-270);
-  -ms-shape-outside: var(--shape-arrow-left-rotate-270);
-  -moz-shape-outside: var(--shape-arrow-left-rotate-270);
-  -o-shape-outside: var(--shape-arrow-left-rotate-270);
-  shape-outside: var(--shape-arrow-left-rotate-270); }
-
-.shape-outside-arrow-left-rotate-180 {
-  -webkit-shape-outside: var(--shape-arrow-left-rotate-180);
-  -ms-shape-outside: var(--shape-arrow-left-rotate-180);
-  -moz-shape-outside: var(--shape-arrow-left-rotate-180);
-  -o-shape-outside: var(--shape-arrow-left-rotate-180);
-  shape-outside: var(--shape-arrow-left-rotate-180); }
-
-.shape-outside-arrow-left-rotate-90 {
-  -webkit-shape-outside: var(--shape-arrow-left-rotate-90);
-  -ms-shape-outside: var(--shape-arrow-left-rotate-90);
-  -moz-shape-outside: var(--shape-arrow-left-rotate-90);
-  -o-shape-outside: var(--shape-arrow-left-rotate-90);
-  shape-outside: var(--shape-arrow-left-rotate-90); }
-
-.shape-outside-rabbet-rotate-270 {
-  -webkit-shape-outside: var(--shape-rabbet-rotate-270);
-  -ms-shape-outside: var(--shape-rabbet-rotate-270);
-  -moz-shape-outside: var(--shape-rabbet-rotate-270);
-  -o-shape-outside: var(--shape-rabbet-rotate-270);
-  shape-outside: var(--shape-rabbet-rotate-270); }
-
-.shape-outside-rabbet-rotate-180 {
-  -webkit-shape-outside: var(--shape-rabbet-rotate-180);
-  -ms-shape-outside: var(--shape-rabbet-rotate-180);
-  -moz-shape-outside: var(--shape-rabbet-rotate-180);
-  -o-shape-outside: var(--shape-rabbet-rotate-180);
-  shape-outside: var(--shape-rabbet-rotate-180); }
-
-.shape-outside-rabbet-rotate-90 {
-  -webkit-shape-outside: var(--shape-rabbet-rotate-90);
-  -ms-shape-outside: var(--shape-rabbet-rotate-90);
-  -moz-shape-outside: var(--shape-rabbet-rotate-90);
-  -o-shape-outside: var(--shape-rabbet-rotate-90);
-  shape-outside: var(--shape-rabbet-rotate-90); }
-
-.shape-outside-bevel-rotate-270 {
-  -webkit-shape-outside: var(--shape-bevel-rotate-270);
-  -ms-shape-outside: var(--shape-bevel-rotate-270);
-  -moz-shape-outside: var(--shape-bevel-rotate-270);
-  -o-shape-outside: var(--shape-bevel-rotate-270);
-  shape-outside: var(--shape-bevel-rotate-270); }
-
-.shape-outside-bevel-rotate-180 {
-  -webkit-shape-outside: var(--shape-bevel-rotate-180);
-  -ms-shape-outside: var(--shape-bevel-rotate-180);
-  -moz-shape-outside: var(--shape-bevel-rotate-180);
-  -o-shape-outside: var(--shape-bevel-rotate-180);
-  shape-outside: var(--shape-bevel-rotate-180); }
-
-.shape-outside-bevel-rotate-90 {
-  -webkit-shape-outside: var(--shape-bevel-rotate-90);
-  -ms-shape-outside: var(--shape-bevel-rotate-90);
-  -moz-shape-outside: var(--shape-bevel-rotate-90);
-  -o-shape-outside: var(--shape-bevel-rotate-90);
-  shape-outside: var(--shape-bevel-rotate-90); }
-
-.shape-outside-decagon-rotate-270 {
-  -webkit-shape-outside: var(--shape-decagon-rotate-270);
-  -ms-shape-outside: var(--shape-decagon-rotate-270);
-  -moz-shape-outside: var(--shape-decagon-rotate-270);
-  -o-shape-outside: var(--shape-decagon-rotate-270);
-  shape-outside: var(--shape-decagon-rotate-270); }
-
-.shape-outside-decagon-rotate-180 {
-  -webkit-shape-outside: var(--shape-decagon-rotate-180);
-  -ms-shape-outside: var(--shape-decagon-rotate-180);
-  -moz-shape-outside: var(--shape-decagon-rotate-180);
-  -o-shape-outside: var(--shape-decagon-rotate-180);
-  shape-outside: var(--shape-decagon-rotate-180); }
-
-.shape-outside-decagon-rotate-90 {
-  -webkit-shape-outside: var(--shape-decagon-rotate-90);
-  -ms-shape-outside: var(--shape-decagon-rotate-90);
-  -moz-shape-outside: var(--shape-decagon-rotate-90);
-  -o-shape-outside: var(--shape-decagon-rotate-90);
-  shape-outside: var(--shape-decagon-rotate-90); }
-
-.shape-outside-nonagon-rotate-270 {
-  -webkit-shape-outside: var(--shape-nonagon-rotate-270);
-  -ms-shape-outside: var(--shape-nonagon-rotate-270);
-  -moz-shape-outside: var(--shape-nonagon-rotate-270);
-  -o-shape-outside: var(--shape-nonagon-rotate-270);
-  shape-outside: var(--shape-nonagon-rotate-270); }
-
-.shape-outside-nonagon-rotate-180 {
-  -webkit-shape-outside: var(--shape-nonagon-rotate-180);
-  -ms-shape-outside: var(--shape-nonagon-rotate-180);
-  -moz-shape-outside: var(--shape-nonagon-rotate-180);
-  -o-shape-outside: var(--shape-nonagon-rotate-180);
-  shape-outside: var(--shape-nonagon-rotate-180); }
-
-.shape-outside-nonagon-rotate-90 {
-  -webkit-shape-outside: var(--shape-nonagon-rotate-90);
-  -ms-shape-outside: var(--shape-nonagon-rotate-90);
-  -moz-shape-outside: var(--shape-nonagon-rotate-90);
-  -o-shape-outside: var(--shape-nonagon-rotate-90);
-  shape-outside: var(--shape-nonagon-rotate-90); }
-
-.shape-outside-octagon-rotate-270 {
-  -webkit-shape-outside: var(--shape-octagon-rotate-270);
-  -ms-shape-outside: var(--shape-octagon-rotate-270);
-  -moz-shape-outside: var(--shape-octagon-rotate-270);
-  -o-shape-outside: var(--shape-octagon-rotate-270);
-  shape-outside: var(--shape-octagon-rotate-270); }
-
-.shape-outside-octagon-rotate-180 {
-  -webkit-shape-outside: var(--shape-octagon-rotate-180);
-  -ms-shape-outside: var(--shape-octagon-rotate-180);
-  -moz-shape-outside: var(--shape-octagon-rotate-180);
-  -o-shape-outside: var(--shape-octagon-rotate-180);
-  shape-outside: var(--shape-octagon-rotate-180); }
-
-.shape-outside-octagon-rotate-90 {
-  -webkit-shape-outside: var(--shape-octagon-rotate-90);
-  -ms-shape-outside: var(--shape-octagon-rotate-90);
-  -moz-shape-outside: var(--shape-octagon-rotate-90);
-  -o-shape-outside: var(--shape-octagon-rotate-90);
-  shape-outside: var(--shape-octagon-rotate-90); }
-
-.shape-outside-heptagon-rotate-270 {
-  -webkit-shape-outside: var(--shape-heptagon-rotate-270);
-  -ms-shape-outside: var(--shape-heptagon-rotate-270);
-  -moz-shape-outside: var(--shape-heptagon-rotate-270);
-  -o-shape-outside: var(--shape-heptagon-rotate-270);
-  shape-outside: var(--shape-heptagon-rotate-270); }
-
-.shape-outside-heptagon-rotate-180 {
-  -webkit-shape-outside: var(--shape-heptagon-rotate-180);
-  -ms-shape-outside: var(--shape-heptagon-rotate-180);
-  -moz-shape-outside: var(--shape-heptagon-rotate-180);
-  -o-shape-outside: var(--shape-heptagon-rotate-180);
-  shape-outside: var(--shape-heptagon-rotate-180); }
-
-.shape-outside-heptagon-rotate-90 {
-  -webkit-shape-outside: var(--shape-heptagon-rotate-90);
-  -ms-shape-outside: var(--shape-heptagon-rotate-90);
-  -moz-shape-outside: var(--shape-heptagon-rotate-90);
-  -o-shape-outside: var(--shape-heptagon-rotate-90);
-  shape-outside: var(--shape-heptagon-rotate-90); }
-
-.shape-outside-hexagon-rotate-270 {
-  -webkit-shape-outside: var(--shape-hexagon-rotate-270);
-  -ms-shape-outside: var(--shape-hexagon-rotate-270);
-  -moz-shape-outside: var(--shape-hexagon-rotate-270);
-  -o-shape-outside: var(--shape-hexagon-rotate-270);
-  shape-outside: var(--shape-hexagon-rotate-270); }
-
-.shape-outside-hexagon-rotate-180 {
-  -webkit-shape-outside: var(--shape-hexagon-rotate-180);
-  -ms-shape-outside: var(--shape-hexagon-rotate-180);
-  -moz-shape-outside: var(--shape-hexagon-rotate-180);
-  -o-shape-outside: var(--shape-hexagon-rotate-180);
-  shape-outside: var(--shape-hexagon-rotate-180); }
-
-.shape-outside-hexagon-rotate-90 {
-  -webkit-shape-outside: var(--shape-hexagon-rotate-90);
-  -ms-shape-outside: var(--shape-hexagon-rotate-90);
-  -moz-shape-outside: var(--shape-hexagon-rotate-90);
-  -o-shape-outside: var(--shape-hexagon-rotate-90);
-  shape-outside: var(--shape-hexagon-rotate-90); }
-
-.shape-outside-pentagon-rotate-270 {
-  -webkit-shape-outside: var(--shape-pentagon-rotate-270);
-  -ms-shape-outside: var(--shape-pentagon-rotate-270);
-  -moz-shape-outside: var(--shape-pentagon-rotate-270);
-  -o-shape-outside: var(--shape-pentagon-rotate-270);
-  shape-outside: var(--shape-pentagon-rotate-270); }
-
-.shape-outside-pentagon-rotate-180 {
-  -webkit-shape-outside: var(--shape-pentagon-rotate-180);
-  -ms-shape-outside: var(--shape-pentagon-rotate-180);
-  -moz-shape-outside: var(--shape-pentagon-rotate-180);
-  -o-shape-outside: var(--shape-pentagon-rotate-180);
-  shape-outside: var(--shape-pentagon-rotate-180); }
-
-.shape-outside-pentagon-rotate-90 {
-  -webkit-shape-outside: var(--shape-pentagon-rotate-90);
-  -ms-shape-outside: var(--shape-pentagon-rotate-90);
-  -moz-shape-outside: var(--shape-pentagon-rotate-90);
-  -o-shape-outside: var(--shape-pentagon-rotate-90);
-  shape-outside: var(--shape-pentagon-rotate-90); }
-
-.shape-outside-rhombus-rotate-270 {
-  -webkit-shape-outside: var(--shape-rhombus-rotate-270);
-  -ms-shape-outside: var(--shape-rhombus-rotate-270);
-  -moz-shape-outside: var(--shape-rhombus-rotate-270);
-  -o-shape-outside: var(--shape-rhombus-rotate-270);
-  shape-outside: var(--shape-rhombus-rotate-270); }
-
-.shape-outside-rhombus-rotate-180 {
-  -webkit-shape-outside: var(--shape-rhombus-rotate-180);
-  -ms-shape-outside: var(--shape-rhombus-rotate-180);
-  -moz-shape-outside: var(--shape-rhombus-rotate-180);
-  -o-shape-outside: var(--shape-rhombus-rotate-180);
-  shape-outside: var(--shape-rhombus-rotate-180); }
-
-.shape-outside-rhombus-rotate-90 {
-  -webkit-shape-outside: var(--shape-rhombus-rotate-90);
-  -ms-shape-outside: var(--shape-rhombus-rotate-90);
-  -moz-shape-outside: var(--shape-rhombus-rotate-90);
-  -o-shape-outside: var(--shape-rhombus-rotate-90);
-  shape-outside: var(--shape-rhombus-rotate-90); }
-
-.shape-outside-parallelogram-rotate-270 {
-  -webkit-shape-outside: var(--shape-parallelogram-rotate-270);
-  -ms-shape-outside: var(--shape-parallelogram-rotate-270);
-  -moz-shape-outside: var(--shape-parallelogram-rotate-270);
-  -o-shape-outside: var(--shape-parallelogram-rotate-270);
-  shape-outside: var(--shape-parallelogram-rotate-270); }
-
-.shape-outside-parallelogram-rotate-180 {
-  -webkit-shape-outside: var(--shape-parallelogram-rotate-180);
-  -ms-shape-outside: var(--shape-parallelogram-rotate-180);
-  -moz-shape-outside: var(--shape-parallelogram-rotate-180);
-  -o-shape-outside: var(--shape-parallelogram-rotate-180);
-  shape-outside: var(--shape-parallelogram-rotate-180); }
-
-.shape-outside-parallelogram-rotate-90 {
-  -webkit-shape-outside: var(--shape-parallelogram-rotate-90);
-  -ms-shape-outside: var(--shape-parallelogram-rotate-90);
-  -moz-shape-outside: var(--shape-parallelogram-rotate-90);
-  -o-shape-outside: var(--shape-parallelogram-rotate-90);
-  shape-outside: var(--shape-parallelogram-rotate-90); }
-
-.shape-outside-trapezoid-rotate-270 {
-  -webkit-shape-outside: var(--shape-trapezoid-rotate-270);
-  -ms-shape-outside: var(--shape-trapezoid-rotate-270);
-  -moz-shape-outside: var(--shape-trapezoid-rotate-270);
-  -o-shape-outside: var(--shape-trapezoid-rotate-270);
-  shape-outside: var(--shape-trapezoid-rotate-270); }
-
-.shape-outside-trapezoid-rotate-180 {
-  -webkit-shape-outside: var(--shape-trapezoid-rotate-180);
-  -ms-shape-outside: var(--shape-trapezoid-rotate-180);
-  -moz-shape-outside: var(--shape-trapezoid-rotate-180);
-  -o-shape-outside: var(--shape-trapezoid-rotate-180);
-  shape-outside: var(--shape-trapezoid-rotate-180); }
-
-.shape-outside-trapezoid-rotate-90 {
-  -webkit-shape-outside: var(--shape-trapezoid-rotate-90);
-  -ms-shape-outside: var(--shape-trapezoid-rotate-90);
-  -moz-shape-outside: var(--shape-trapezoid-rotate-90);
-  -o-shape-outside: var(--shape-trapezoid-rotate-90);
-  shape-outside: var(--shape-trapezoid-rotate-90); }
-
-.shape-outside-triangle-orthogonal-rotate-270 {
-  -webkit-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
-  -ms-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
-  -moz-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
-  -o-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
-  shape-outside: var(--shape-triangle-orthogonal-rotate-270); }
-
-.shape-outside-triangle-orthogonal-rotate-180 {
-  -webkit-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
-  -ms-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
-  -moz-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
-  -o-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
-  shape-outside: var(--shape-triangle-orthogonal-rotate-180); }
-
-.shape-outside-triangle-orthogonal-rotate-90 {
-  -webkit-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
-  -ms-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
-  -moz-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
-  -o-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
-  shape-outside: var(--shape-triangle-orthogonal-rotate-90); }
-
-.shape-outside-triangle-rotate-270 {
-  -webkit-shape-outside: var(--shape-triangle-rotate-270);
-  -ms-shape-outside: var(--shape-triangle-rotate-270);
-  -moz-shape-outside: var(--shape-triangle-rotate-270);
-  -o-shape-outside: var(--shape-triangle-rotate-270);
-  shape-outside: var(--shape-triangle-rotate-270); }
-
-.shape-outside-triangle-rotate-180 {
-  -webkit-shape-outside: var(--shape-triangle-rotate-180);
-  -ms-shape-outside: var(--shape-triangle-rotate-180);
-  -moz-shape-outside: var(--shape-triangle-rotate-180);
-  -o-shape-outside: var(--shape-triangle-rotate-180);
-  shape-outside: var(--shape-triangle-rotate-180); }
-
-.shape-outside-triangle-rotate-90 {
-  -webkit-shape-outside: var(--shape-triangle-rotate-90);
-  -ms-shape-outside: var(--shape-triangle-rotate-90);
-  -moz-shape-outside: var(--shape-triangle-rotate-90);
-  -o-shape-outside: var(--shape-triangle-rotate-90);
-  shape-outside: var(--shape-triangle-rotate-90); }
-
-.shape-margin-0 {
-  -webkit-shape-margin: var(--shape-spacer-0);
-  -ms-shape-margin: var(--shape-spacer-0);
-  -moz-shape-margin: var(--shape-spacer-0);
-  -o-shape-margin: var(--shape-spacer-0);
-  shape-margin: var(--shape-spacer-0); }
-
-.shape-margin-1 {
-  -webkit-shape-margin: var(--shape-spacer-1);
-  -ms-shape-margin: var(--shape-spacer-1);
-  -moz-shape-margin: var(--shape-spacer-1);
-  -o-shape-margin: var(--shape-spacer-1);
-  shape-margin: var(--shape-spacer-1); }
-
-.shape-margin-2 {
-  -webkit-shape-margin: var(--shape-spacer-2);
-  -ms-shape-margin: var(--shape-spacer-2);
-  -moz-shape-margin: var(--shape-spacer-2);
-  -o-shape-margin: var(--shape-spacer-2);
-  shape-margin: var(--shape-spacer-2); }
-
-.shape-margin-3 {
-  -webkit-shape-margin: var(--shape-spacer-3);
-  -ms-shape-margin: var(--shape-spacer-3);
-  -moz-shape-margin: var(--shape-spacer-3);
-  -o-shape-margin: var(--shape-spacer-3);
-  shape-margin: var(--shape-spacer-3); }
-
-.shape-margin-4 {
-  -webkit-shape-margin: var(--shape-spacer-4);
-  -ms-shape-margin: var(--shape-spacer-4);
-  -moz-shape-margin: var(--shape-spacer-4);
-  -o-shape-margin: var(--shape-spacer-4);
-  shape-margin: var(--shape-spacer-4); }
-
-.shape-margin-5 {
-  -webkit-shape-margin: var(--shape-spacer-5);
-  -ms-shape-margin: var(--shape-spacer-5);
-  -moz-shape-margin: var(--shape-spacer-5);
-  -o-shape-margin: var(--shape-spacer-5);
-  shape-margin: var(--shape-spacer-5); }
-
-/* Masks */
-.mask {
-  -webkit-mask-image: linear-gradient(black, transparent);
-  -ms-mask-image: linear-gradient(black, transparent);
-  -moz-mask-image: linear-gradient(black, transparent);
-  -o-mask-image: linear-gradient(black, transparent);
-  mask-image: linear-gradient(black, transparent); }
+  /* Shape Spacers */
+  /* Clips */
+  /* Shape Outside */
+  /* Shape Margins */
+  /* Masks */ }
+  :root .clip-circle {
+    -webkit-clip-path: var(--shape-circle);
+    -ms-clip-path: var(--shape-circle);
+    -moz-clip-path: var(--shape-circle);
+    -o-clip-path: var(--shape-circle);
+    clip-path: var(--shape-circle); }
+  :root .clip-triangle {
+    -webkit-clip-path: var(--shape-triangle);
+    -ms-clip-path: var(--shape-triangle);
+    -moz-clip-path: var(--shape-triangle);
+    -o-clip-path: var(--shape-triangle);
+    clip-path: var(--shape-triangle); }
+  :root .clip-triangle-orthogonal {
+    -webkit-clip-path: var(--shape-triangle-orthogonal);
+    -ms-clip-path: var(--shape-triangle-orthogonal);
+    -moz-clip-path: var(--shape-triangle-orthogonal);
+    -o-clip-path: var(--shape-triangle-orthogonal);
+    clip-path: var(--shape-triangle-orthogonal); }
+  :root .clip-trapezoid {
+    -webkit-clip-path: var(--shape-trapezoid);
+    -ms-clip-path: var(--shape-trapezoid);
+    -moz-clip-path: var(--shape-trapezoid);
+    -o-clip-path: var(--shape-trapezoid);
+    clip-path: var(--shape-trapezoid); }
+  :root .clip-parallelogram {
+    -webkit-clip-path: var(--shape-parallelogram);
+    -ms-clip-path: var(--shape-parallelogram);
+    -moz-clip-path: var(--shape-parallelogram);
+    -o-clip-path: var(--shape-parallelogram);
+    clip-path: var(--shape-parallelogram); }
+  :root .clip-rhombus {
+    -webkit-clip-path: var(--shape-rhombus);
+    -ms-clip-path: var(--shape-rhombus);
+    -moz-clip-path: var(--shape-rhombus);
+    -o-clip-path: var(--shape-rhombus);
+    clip-path: var(--shape-rhombus); }
+  :root .clip-pentagon {
+    -webkit-clip-path: var(--shape-pentagon);
+    -ms-clip-path: var(--shape-pentagon);
+    -moz-clip-path: var(--shape-pentagon);
+    -o-clip-path: var(--shape-pentagon);
+    clip-path: var(--shape-pentagon); }
+  :root .clip-hexagon {
+    -webkit-clip-path: var(--shape-hexagon);
+    -ms-clip-path: var(--shape-hexagon);
+    -moz-clip-path: var(--shape-hexagon);
+    -o-clip-path: var(--shape-hexagon);
+    clip-path: var(--shape-hexagon); }
+  :root .clip-heptagon {
+    -webkit-clip-path: var(--shape-heptagon);
+    -ms-clip-path: var(--shape-heptagon);
+    -moz-clip-path: var(--shape-heptagon);
+    -o-clip-path: var(--shape-heptagon);
+    clip-path: var(--shape-heptagon); }
+  :root .clip-octagon {
+    -webkit-clip-path: var(--shape-octagon);
+    -ms-clip-path: var(--shape-octagon);
+    -moz-clip-path: var(--shape-octagon);
+    -o-clip-path: var(--shape-octagon);
+    clip-path: var(--shape-octagon); }
+  :root .clip-nonagon {
+    -webkit-clip-path: var(--shape-nonagon);
+    -ms-clip-path: var(--shape-nonagon);
+    -moz-clip-path: var(--shape-nonagon);
+    -o-clip-path: var(--shape-nonagon);
+    clip-path: var(--shape-nonagon); }
+  :root .clip-decagon {
+    -webkit-clip-path: var(--shape-decagon);
+    -ms-clip-path: var(--shape-decagon);
+    -moz-clip-path: var(--shape-decagon);
+    -o-clip-path: var(--shape-decagon);
+    clip-path: var(--shape-decagon); }
+  :root .clip-bevel {
+    -webkit-clip-path: var(--shape-bevel);
+    -ms-clip-path: var(--shape-bevel);
+    -moz-clip-path: var(--shape-bevel);
+    -o-clip-path: var(--shape-bevel);
+    clip-path: var(--shape-bevel); }
+  :root .clip-rabbet {
+    -webkit-clip-path: var(--shape-rabbet);
+    -ms-clip-path: var(--shape-rabbet);
+    -moz-clip-path: var(--shape-rabbet);
+    -o-clip-path: var(--shape-rabbet);
+    clip-path: var(--shape-rabbet); }
+  :root .clip-arrow-left {
+    -webkit-clip-path: var(--shape-arrow-left);
+    -ms-clip-path: var(--shape-arrow-left);
+    -moz-clip-path: var(--shape-arrow-left);
+    -o-clip-path: var(--shape-arrow-left);
+    clip-path: var(--shape-arrow-left); }
+  :root .clip-arrow-right {
+    -webkit-clip-path: var(--shape-arrow-right);
+    -ms-clip-path: var(--shape-arrow-right);
+    -moz-clip-path: var(--shape-arrow-right);
+    -o-clip-path: var(--shape-arrow-right);
+    clip-path: var(--shape-arrow-right); }
+  :root .clip-point-left {
+    -webkit-clip-path: var(--shape-point-left);
+    -ms-clip-path: var(--shape-point-left);
+    -moz-clip-path: var(--shape-point-left);
+    -o-clip-path: var(--shape-point-left);
+    clip-path: var(--shape-point-left); }
+  :root .clip-point-right {
+    -webkit-clip-path: var(--shape-point-right);
+    -ms-clip-path: var(--shape-point-right);
+    -moz-clip-path: var(--shape-point-right);
+    -o-clip-path: var(--shape-point-right);
+    clip-path: var(--shape-point-right); }
+  :root .clip-chevron-left {
+    -webkit-clip-path: var(--shape-chevron-left);
+    -ms-clip-path: var(--shape-chevron-left);
+    -moz-clip-path: var(--shape-chevron-left);
+    -o-clip-path: var(--shape-chevron-left);
+    clip-path: var(--shape-chevron-left); }
+  :root .clip-chevron-right {
+    -webkit-clip-path: var(--shape-chevron-right);
+    -ms-clip-path: var(--shape-chevron-right);
+    -moz-clip-path: var(--shape-chevron-right);
+    -o-clip-path: var(--shape-chevron-right);
+    clip-path: var(--shape-chevron-right); }
+  :root .clip-star {
+    -webkit-clip-path: var(--shape-star);
+    -ms-clip-path: var(--shape-star);
+    -moz-clip-path: var(--shape-star);
+    -o-clip-path: var(--shape-star);
+    clip-path: var(--shape-star); }
+  :root .clip-star-rotate-270 {
+    -webkit-clip-path: var(--shape-star-rotate-270);
+    -ms-clip-path: var(--shape-star-rotate-270);
+    -moz-clip-path: var(--shape-star-rotate-270);
+    -o-clip-path: var(--shape-star-rotate-270);
+    clip-path: var(--shape-star-rotate-270); }
+  :root .clip-star-rotate-180 {
+    -webkit-clip-path: var(--shape-star-rotate-180);
+    -ms-clip-path: var(--shape-star-rotate-180);
+    -moz-clip-path: var(--shape-star-rotate-180);
+    -o-clip-path: var(--shape-star-rotate-180);
+    clip-path: var(--shape-star-rotate-180); }
+  :root .clip-star-rotate-90 {
+    -webkit-clip-path: var(--shape-star-rotate-90);
+    -ms-clip-path: var(--shape-star-rotate-90);
+    -moz-clip-path: var(--shape-star-rotate-90);
+    -o-clip-path: var(--shape-star-rotate-90);
+    clip-path: var(--shape-star-rotate-90); }
+  :root .clip-chevron-right-rotate-270 {
+    -webkit-clip-path: var(--shape-chevron-right-rotate-270);
+    -ms-clip-path: var(--shape-chevron-right-rotate-270);
+    -moz-clip-path: var(--shape-chevron-right-rotate-270);
+    -o-clip-path: var(--shape-chevron-right-rotate-270);
+    clip-path: var(--shape-chevron-right-rotate-270); }
+  :root .clip-chevron-right-rotate-180 {
+    -webkit-clip-path: var(--shape-chevron-right-rotate-180);
+    -ms-clip-path: var(--shape-chevron-right-rotate-180);
+    -moz-clip-path: var(--shape-chevron-right-rotate-180);
+    -o-clip-path: var(--shape-chevron-right-rotate-180);
+    clip-path: var(--shape-chevron-right-rotate-180); }
+  :root .clip-chevron-right-rotate-90 {
+    -webkit-clip-path: var(--shape-chevron-right-rotate-90);
+    -ms-clip-path: var(--shape-chevron-right-rotate-90);
+    -moz-clip-path: var(--shape-chevron-right-rotate-90);
+    -o-clip-path: var(--shape-chevron-right-rotate-90);
+    clip-path: var(--shape-chevron-right-rotate-90); }
+  :root .clip-chevron-left-rotate-270 {
+    -webkit-clip-path: var(--shape-chevron-left-rotate-270);
+    -ms-clip-path: var(--shape-chevron-left-rotate-270);
+    -moz-clip-path: var(--shape-chevron-left-rotate-270);
+    -o-clip-path: var(--shape-chevron-left-rotate-270);
+    clip-path: var(--shape-chevron-left-rotate-270); }
+  :root .clip-chevron-left-rotate-180 {
+    -webkit-clip-path: var(--shape-chevron-left-rotate-180);
+    -ms-clip-path: var(--shape-chevron-left-rotate-180);
+    -moz-clip-path: var(--shape-chevron-left-rotate-180);
+    -o-clip-path: var(--shape-chevron-left-rotate-180);
+    clip-path: var(--shape-chevron-left-rotate-180); }
+  :root .clip-chevron-left-rotate-90 {
+    -webkit-clip-path: var(--shape-chevron-left-rotate-90);
+    -ms-clip-path: var(--shape-chevron-left-rotate-90);
+    -moz-clip-path: var(--shape-chevron-left-rotate-90);
+    -o-clip-path: var(--shape-chevron-left-rotate-90);
+    clip-path: var(--shape-chevron-left-rotate-90); }
+  :root .clip-point-right-rotate-270 {
+    -webkit-clip-path: var(--shape-point-right-rotate-270);
+    -ms-clip-path: var(--shape-point-right-rotate-270);
+    -moz-clip-path: var(--shape-point-right-rotate-270);
+    -o-clip-path: var(--shape-point-right-rotate-270);
+    clip-path: var(--shape-point-right-rotate-270); }
+  :root .clip-point-right-rotate-180 {
+    -webkit-clip-path: var(--shape-point-right-rotate-180);
+    -ms-clip-path: var(--shape-point-right-rotate-180);
+    -moz-clip-path: var(--shape-point-right-rotate-180);
+    -o-clip-path: var(--shape-point-right-rotate-180);
+    clip-path: var(--shape-point-right-rotate-180); }
+  :root .clip-point-right-rotate-90 {
+    -webkit-clip-path: var(--shape-point-right-rotate-90);
+    -ms-clip-path: var(--shape-point-right-rotate-90);
+    -moz-clip-path: var(--shape-point-right-rotate-90);
+    -o-clip-path: var(--shape-point-right-rotate-90);
+    clip-path: var(--shape-point-right-rotate-90); }
+  :root .clip-point-left-rotate-270 {
+    -webkit-clip-path: var(--shape-point-left-rotate-270);
+    -ms-clip-path: var(--shape-point-left-rotate-270);
+    -moz-clip-path: var(--shape-point-left-rotate-270);
+    -o-clip-path: var(--shape-point-left-rotate-270);
+    clip-path: var(--shape-point-left-rotate-270); }
+  :root .clip-point-left-rotate-180 {
+    -webkit-clip-path: var(--shape-point-left-rotate-180);
+    -ms-clip-path: var(--shape-point-left-rotate-180);
+    -moz-clip-path: var(--shape-point-left-rotate-180);
+    -o-clip-path: var(--shape-point-left-rotate-180);
+    clip-path: var(--shape-point-left-rotate-180); }
+  :root .clip-point-left-rotate-90 {
+    -webkit-clip-path: var(--shape-point-left-rotate-90);
+    -ms-clip-path: var(--shape-point-left-rotate-90);
+    -moz-clip-path: var(--shape-point-left-rotate-90);
+    -o-clip-path: var(--shape-point-left-rotate-90);
+    clip-path: var(--shape-point-left-rotate-90); }
+  :root .clip-arrow-right-rotate-270 {
+    -webkit-clip-path: var(--shape-arrow-right-rotate-270);
+    -ms-clip-path: var(--shape-arrow-right-rotate-270);
+    -moz-clip-path: var(--shape-arrow-right-rotate-270);
+    -o-clip-path: var(--shape-arrow-right-rotate-270);
+    clip-path: var(--shape-arrow-right-rotate-270); }
+  :root .clip-arrow-right-rotate-180 {
+    -webkit-clip-path: var(--shape-arrow-right-rotate-180);
+    -ms-clip-path: var(--shape-arrow-right-rotate-180);
+    -moz-clip-path: var(--shape-arrow-right-rotate-180);
+    -o-clip-path: var(--shape-arrow-right-rotate-180);
+    clip-path: var(--shape-arrow-right-rotate-180); }
+  :root .clip-arrow-right-rotate-90 {
+    -webkit-clip-path: var(--shape-arrow-right-rotate-90);
+    -ms-clip-path: var(--shape-arrow-right-rotate-90);
+    -moz-clip-path: var(--shape-arrow-right-rotate-90);
+    -o-clip-path: var(--shape-arrow-right-rotate-90);
+    clip-path: var(--shape-arrow-right-rotate-90); }
+  :root .clip-arrow-left-rotate-270 {
+    -webkit-clip-path: var(--shape-arrow-left-rotate-270);
+    -ms-clip-path: var(--shape-arrow-left-rotate-270);
+    -moz-clip-path: var(--shape-arrow-left-rotate-270);
+    -o-clip-path: var(--shape-arrow-left-rotate-270);
+    clip-path: var(--shape-arrow-left-rotate-270); }
+  :root .clip-arrow-left-rotate-180 {
+    -webkit-clip-path: var(--shape-arrow-left-rotate-180);
+    -ms-clip-path: var(--shape-arrow-left-rotate-180);
+    -moz-clip-path: var(--shape-arrow-left-rotate-180);
+    -o-clip-path: var(--shape-arrow-left-rotate-180);
+    clip-path: var(--shape-arrow-left-rotate-180); }
+  :root .clip-arrow-left-rotate-90 {
+    -webkit-clip-path: var(--shape-arrow-left-rotate-90);
+    -ms-clip-path: var(--shape-arrow-left-rotate-90);
+    -moz-clip-path: var(--shape-arrow-left-rotate-90);
+    -o-clip-path: var(--shape-arrow-left-rotate-90);
+    clip-path: var(--shape-arrow-left-rotate-90); }
+  :root .clip-rabbet-rotate-270 {
+    -webkit-clip-path: var(--shape-rabbet-rotate-270);
+    -ms-clip-path: var(--shape-rabbet-rotate-270);
+    -moz-clip-path: var(--shape-rabbet-rotate-270);
+    -o-clip-path: var(--shape-rabbet-rotate-270);
+    clip-path: var(--shape-rabbet-rotate-270); }
+  :root .clip-rabbet-rotate-180 {
+    -webkit-clip-path: var(--shape-rabbet-rotate-180);
+    -ms-clip-path: var(--shape-rabbet-rotate-180);
+    -moz-clip-path: var(--shape-rabbet-rotate-180);
+    -o-clip-path: var(--shape-rabbet-rotate-180);
+    clip-path: var(--shape-rabbet-rotate-180); }
+  :root .clip-rabbet-rotate-90 {
+    -webkit-clip-path: var(--shape-rabbet-rotate-90);
+    -ms-clip-path: var(--shape-rabbet-rotate-90);
+    -moz-clip-path: var(--shape-rabbet-rotate-90);
+    -o-clip-path: var(--shape-rabbet-rotate-90);
+    clip-path: var(--shape-rabbet-rotate-90); }
+  :root .clip-bevel-rotate-270 {
+    -webkit-clip-path: var(--shape-bevel-rotate-270);
+    -ms-clip-path: var(--shape-bevel-rotate-270);
+    -moz-clip-path: var(--shape-bevel-rotate-270);
+    -o-clip-path: var(--shape-bevel-rotate-270);
+    clip-path: var(--shape-bevel-rotate-270); }
+  :root .clip-bevel-rotate-180 {
+    -webkit-clip-path: var(--shape-bevel-rotate-180);
+    -ms-clip-path: var(--shape-bevel-rotate-180);
+    -moz-clip-path: var(--shape-bevel-rotate-180);
+    -o-clip-path: var(--shape-bevel-rotate-180);
+    clip-path: var(--shape-bevel-rotate-180); }
+  :root .clip-bevel-rotate-90 {
+    -webkit-clip-path: var(--shape-bevel-rotate-90);
+    -ms-clip-path: var(--shape-bevel-rotate-90);
+    -moz-clip-path: var(--shape-bevel-rotate-90);
+    -o-clip-path: var(--shape-bevel-rotate-90);
+    clip-path: var(--shape-bevel-rotate-90); }
+  :root .clip-decagon-rotate-270 {
+    -webkit-clip-path: var(--shape-decagon-rotate-270);
+    -ms-clip-path: var(--shape-decagon-rotate-270);
+    -moz-clip-path: var(--shape-decagon-rotate-270);
+    -o-clip-path: var(--shape-decagon-rotate-270);
+    clip-path: var(--shape-decagon-rotate-270); }
+  :root .clip-decagon-rotate-180 {
+    -webkit-clip-path: var(--shape-decagon-rotate-180);
+    -ms-clip-path: var(--shape-decagon-rotate-180);
+    -moz-clip-path: var(--shape-decagon-rotate-180);
+    -o-clip-path: var(--shape-decagon-rotate-180);
+    clip-path: var(--shape-decagon-rotate-180); }
+  :root .clip-decagon-rotate-90 {
+    -webkit-clip-path: var(--shape-decagon-rotate-90);
+    -ms-clip-path: var(--shape-decagon-rotate-90);
+    -moz-clip-path: var(--shape-decagon-rotate-90);
+    -o-clip-path: var(--shape-decagon-rotate-90);
+    clip-path: var(--shape-decagon-rotate-90); }
+  :root .clip-nonagon-rotate-270 {
+    -webkit-clip-path: var(--shape-nonagon-rotate-270);
+    -ms-clip-path: var(--shape-nonagon-rotate-270);
+    -moz-clip-path: var(--shape-nonagon-rotate-270);
+    -o-clip-path: var(--shape-nonagon-rotate-270);
+    clip-path: var(--shape-nonagon-rotate-270); }
+  :root .clip-nonagon-rotate-180 {
+    -webkit-clip-path: var(--shape-nonagon-rotate-180);
+    -ms-clip-path: var(--shape-nonagon-rotate-180);
+    -moz-clip-path: var(--shape-nonagon-rotate-180);
+    -o-clip-path: var(--shape-nonagon-rotate-180);
+    clip-path: var(--shape-nonagon-rotate-180); }
+  :root .clip-nonagon-rotate-90 {
+    -webkit-clip-path: var(--shape-nonagon-rotate-90);
+    -ms-clip-path: var(--shape-nonagon-rotate-90);
+    -moz-clip-path: var(--shape-nonagon-rotate-90);
+    -o-clip-path: var(--shape-nonagon-rotate-90);
+    clip-path: var(--shape-nonagon-rotate-90); }
+  :root .clip-octagon-rotate-270 {
+    -webkit-clip-path: var(--shape-octagon-rotate-270);
+    -ms-clip-path: var(--shape-octagon-rotate-270);
+    -moz-clip-path: var(--shape-octagon-rotate-270);
+    -o-clip-path: var(--shape-octagon-rotate-270);
+    clip-path: var(--shape-octagon-rotate-270); }
+  :root .clip-octagon-rotate-180 {
+    -webkit-clip-path: var(--shape-octagon-rotate-180);
+    -ms-clip-path: var(--shape-octagon-rotate-180);
+    -moz-clip-path: var(--shape-octagon-rotate-180);
+    -o-clip-path: var(--shape-octagon-rotate-180);
+    clip-path: var(--shape-octagon-rotate-180); }
+  :root .clip-octagon-rotate-90 {
+    -webkit-clip-path: var(--shape-octagon-rotate-90);
+    -ms-clip-path: var(--shape-octagon-rotate-90);
+    -moz-clip-path: var(--shape-octagon-rotate-90);
+    -o-clip-path: var(--shape-octagon-rotate-90);
+    clip-path: var(--shape-octagon-rotate-90); }
+  :root .clip-heptagon-rotate-270 {
+    -webkit-clip-path: var(--shape-heptagon-rotate-270);
+    -ms-clip-path: var(--shape-heptagon-rotate-270);
+    -moz-clip-path: var(--shape-heptagon-rotate-270);
+    -o-clip-path: var(--shape-heptagon-rotate-270);
+    clip-path: var(--shape-heptagon-rotate-270); }
+  :root .clip-heptagon-rotate-180 {
+    -webkit-clip-path: var(--shape-heptagon-rotate-180);
+    -ms-clip-path: var(--shape-heptagon-rotate-180);
+    -moz-clip-path: var(--shape-heptagon-rotate-180);
+    -o-clip-path: var(--shape-heptagon-rotate-180);
+    clip-path: var(--shape-heptagon-rotate-180); }
+  :root .clip-heptagon-rotate-90 {
+    -webkit-clip-path: var(--shape-heptagon-rotate-90);
+    -ms-clip-path: var(--shape-heptagon-rotate-90);
+    -moz-clip-path: var(--shape-heptagon-rotate-90);
+    -o-clip-path: var(--shape-heptagon-rotate-90);
+    clip-path: var(--shape-heptagon-rotate-90); }
+  :root .clip-hexagon-rotate-270 {
+    -webkit-clip-path: var(--shape-hexagon-rotate-270);
+    -ms-clip-path: var(--shape-hexagon-rotate-270);
+    -moz-clip-path: var(--shape-hexagon-rotate-270);
+    -o-clip-path: var(--shape-hexagon-rotate-270);
+    clip-path: var(--shape-hexagon-rotate-270); }
+  :root .clip-hexagon-rotate-180 {
+    -webkit-clip-path: var(--shape-hexagon-rotate-180);
+    -ms-clip-path: var(--shape-hexagon-rotate-180);
+    -moz-clip-path: var(--shape-hexagon-rotate-180);
+    -o-clip-path: var(--shape-hexagon-rotate-180);
+    clip-path: var(--shape-hexagon-rotate-180); }
+  :root .clip-hexagon-rotate-90 {
+    -webkit-clip-path: var(--shape-hexagon-rotate-90);
+    -ms-clip-path: var(--shape-hexagon-rotate-90);
+    -moz-clip-path: var(--shape-hexagon-rotate-90);
+    -o-clip-path: var(--shape-hexagon-rotate-90);
+    clip-path: var(--shape-hexagon-rotate-90); }
+  :root .clip-pentagon-rotate-270 {
+    -webkit-clip-path: var(--shape-pentagon-rotate-270);
+    -ms-clip-path: var(--shape-pentagon-rotate-270);
+    -moz-clip-path: var(--shape-pentagon-rotate-270);
+    -o-clip-path: var(--shape-pentagon-rotate-270);
+    clip-path: var(--shape-pentagon-rotate-270); }
+  :root .clip-pentagon-rotate-180 {
+    -webkit-clip-path: var(--shape-pentagon-rotate-180);
+    -ms-clip-path: var(--shape-pentagon-rotate-180);
+    -moz-clip-path: var(--shape-pentagon-rotate-180);
+    -o-clip-path: var(--shape-pentagon-rotate-180);
+    clip-path: var(--shape-pentagon-rotate-180); }
+  :root .clip-pentagon-rotate-90 {
+    -webkit-clip-path: var(--shape-pentagon-rotate-90);
+    -ms-clip-path: var(--shape-pentagon-rotate-90);
+    -moz-clip-path: var(--shape-pentagon-rotate-90);
+    -o-clip-path: var(--shape-pentagon-rotate-90);
+    clip-path: var(--shape-pentagon-rotate-90); }
+  :root .clip-rhombus-rotate-270 {
+    -webkit-clip-path: var(--shape-rhombus-rotate-270);
+    -ms-clip-path: var(--shape-rhombus-rotate-270);
+    -moz-clip-path: var(--shape-rhombus-rotate-270);
+    -o-clip-path: var(--shape-rhombus-rotate-270);
+    clip-path: var(--shape-rhombus-rotate-270); }
+  :root .clip-rhombus-rotate-180 {
+    -webkit-clip-path: var(--shape-rhombus-rotate-180);
+    -ms-clip-path: var(--shape-rhombus-rotate-180);
+    -moz-clip-path: var(--shape-rhombus-rotate-180);
+    -o-clip-path: var(--shape-rhombus-rotate-180);
+    clip-path: var(--shape-rhombus-rotate-180); }
+  :root .clip-rhombus-rotate-90 {
+    -webkit-clip-path: var(--shape-rhombus-rotate-90);
+    -ms-clip-path: var(--shape-rhombus-rotate-90);
+    -moz-clip-path: var(--shape-rhombus-rotate-90);
+    -o-clip-path: var(--shape-rhombus-rotate-90);
+    clip-path: var(--shape-rhombus-rotate-90); }
+  :root .clip-parallelogram-rotate-270 {
+    -webkit-clip-path: var(--shape-parallelogram-rotate-270);
+    -ms-clip-path: var(--shape-parallelogram-rotate-270);
+    -moz-clip-path: var(--shape-parallelogram-rotate-270);
+    -o-clip-path: var(--shape-parallelogram-rotate-270);
+    clip-path: var(--shape-parallelogram-rotate-270); }
+  :root .clip-parallelogram-rotate-180 {
+    -webkit-clip-path: var(--shape-parallelogram-rotate-180);
+    -ms-clip-path: var(--shape-parallelogram-rotate-180);
+    -moz-clip-path: var(--shape-parallelogram-rotate-180);
+    -o-clip-path: var(--shape-parallelogram-rotate-180);
+    clip-path: var(--shape-parallelogram-rotate-180); }
+  :root .clip-parallelogram-rotate-90 {
+    -webkit-clip-path: var(--shape-parallelogram-rotate-90);
+    -ms-clip-path: var(--shape-parallelogram-rotate-90);
+    -moz-clip-path: var(--shape-parallelogram-rotate-90);
+    -o-clip-path: var(--shape-parallelogram-rotate-90);
+    clip-path: var(--shape-parallelogram-rotate-90); }
+  :root .clip-trapezoid-rotate-270 {
+    -webkit-clip-path: var(--shape-trapezoid-rotate-270);
+    -ms-clip-path: var(--shape-trapezoid-rotate-270);
+    -moz-clip-path: var(--shape-trapezoid-rotate-270);
+    -o-clip-path: var(--shape-trapezoid-rotate-270);
+    clip-path: var(--shape-trapezoid-rotate-270); }
+  :root .clip-trapezoid-rotate-180 {
+    -webkit-clip-path: var(--shape-trapezoid-rotate-180);
+    -ms-clip-path: var(--shape-trapezoid-rotate-180);
+    -moz-clip-path: var(--shape-trapezoid-rotate-180);
+    -o-clip-path: var(--shape-trapezoid-rotate-180);
+    clip-path: var(--shape-trapezoid-rotate-180); }
+  :root .clip-trapezoid-rotate-90 {
+    -webkit-clip-path: var(--shape-trapezoid-rotate-90);
+    -ms-clip-path: var(--shape-trapezoid-rotate-90);
+    -moz-clip-path: var(--shape-trapezoid-rotate-90);
+    -o-clip-path: var(--shape-trapezoid-rotate-90);
+    clip-path: var(--shape-trapezoid-rotate-90); }
+  :root .clip-triangle-orthogonal-rotate-270 {
+    -webkit-clip-path: var(--shape-triangle-orthogonal-rotate-270);
+    -ms-clip-path: var(--shape-triangle-orthogonal-rotate-270);
+    -moz-clip-path: var(--shape-triangle-orthogonal-rotate-270);
+    -o-clip-path: var(--shape-triangle-orthogonal-rotate-270);
+    clip-path: var(--shape-triangle-orthogonal-rotate-270); }
+  :root .clip-triangle-orthogonal-rotate-180 {
+    -webkit-clip-path: var(--shape-triangle-orthogonal-rotate-180);
+    -ms-clip-path: var(--shape-triangle-orthogonal-rotate-180);
+    -moz-clip-path: var(--shape-triangle-orthogonal-rotate-180);
+    -o-clip-path: var(--shape-triangle-orthogonal-rotate-180);
+    clip-path: var(--shape-triangle-orthogonal-rotate-180); }
+  :root .clip-triangle-orthogonal-rotate-90 {
+    -webkit-clip-path: var(--shape-triangle-orthogonal-rotate-90);
+    -ms-clip-path: var(--shape-triangle-orthogonal-rotate-90);
+    -moz-clip-path: var(--shape-triangle-orthogonal-rotate-90);
+    -o-clip-path: var(--shape-triangle-orthogonal-rotate-90);
+    clip-path: var(--shape-triangle-orthogonal-rotate-90); }
+  :root .clip-triangle-rotate-270 {
+    -webkit-clip-path: var(--shape-triangle-rotate-270);
+    -ms-clip-path: var(--shape-triangle-rotate-270);
+    -moz-clip-path: var(--shape-triangle-rotate-270);
+    -o-clip-path: var(--shape-triangle-rotate-270);
+    clip-path: var(--shape-triangle-rotate-270); }
+  :root .clip-triangle-rotate-180 {
+    -webkit-clip-path: var(--shape-triangle-rotate-180);
+    -ms-clip-path: var(--shape-triangle-rotate-180);
+    -moz-clip-path: var(--shape-triangle-rotate-180);
+    -o-clip-path: var(--shape-triangle-rotate-180);
+    clip-path: var(--shape-triangle-rotate-180); }
+  :root .clip-triangle-rotate-90 {
+    -webkit-clip-path: var(--shape-triangle-rotate-90);
+    -ms-clip-path: var(--shape-triangle-rotate-90);
+    -moz-clip-path: var(--shape-triangle-rotate-90);
+    -o-clip-path: var(--shape-triangle-rotate-90);
+    clip-path: var(--shape-triangle-rotate-90); }
+  :root .shape-outside-circle {
+    -webkit-shape-outside: var(--shape-circle);
+    -ms-shape-outside: var(--shape-circle);
+    -moz-shape-outside: var(--shape-circle);
+    -o-shape-outside: var(--shape-circle);
+    shape-outside: var(--shape-circle); }
+  :root .shape-outside-triangle {
+    -webkit-shape-outside: var(--shape-triangle);
+    -ms-shape-outside: var(--shape-triangle);
+    -moz-shape-outside: var(--shape-triangle);
+    -o-shape-outside: var(--shape-triangle);
+    shape-outside: var(--shape-triangle); }
+  :root .shape-outside-triangle-orthogonal {
+    -webkit-shape-outside: var(--shape-triangle-orthogonal);
+    -ms-shape-outside: var(--shape-triangle-orthogonal);
+    -moz-shape-outside: var(--shape-triangle-orthogonal);
+    -o-shape-outside: var(--shape-triangle-orthogonal);
+    shape-outside: var(--shape-triangle-orthogonal); }
+  :root .shape-outside-trapezoid {
+    -webkit-shape-outside: var(--shape-trapezoid);
+    -ms-shape-outside: var(--shape-trapezoid);
+    -moz-shape-outside: var(--shape-trapezoid);
+    -o-shape-outside: var(--shape-trapezoid);
+    shape-outside: var(--shape-trapezoid); }
+  :root .shape-outside-parallelogram {
+    -webkit-shape-outside: var(--shape-parallelogram);
+    -ms-shape-outside: var(--shape-parallelogram);
+    -moz-shape-outside: var(--shape-parallelogram);
+    -o-shape-outside: var(--shape-parallelogram);
+    shape-outside: var(--shape-parallelogram); }
+  :root .shape-outside-rhombus {
+    -webkit-shape-outside: var(--shape-rhombus);
+    -ms-shape-outside: var(--shape-rhombus);
+    -moz-shape-outside: var(--shape-rhombus);
+    -o-shape-outside: var(--shape-rhombus);
+    shape-outside: var(--shape-rhombus); }
+  :root .shape-outside-pentagon {
+    -webkit-shape-outside: var(--shape-pentagon);
+    -ms-shape-outside: var(--shape-pentagon);
+    -moz-shape-outside: var(--shape-pentagon);
+    -o-shape-outside: var(--shape-pentagon);
+    shape-outside: var(--shape-pentagon); }
+  :root .shape-outside-hexagon {
+    -webkit-shape-outside: var(--shape-hexagon);
+    -ms-shape-outside: var(--shape-hexagon);
+    -moz-shape-outside: var(--shape-hexagon);
+    -o-shape-outside: var(--shape-hexagon);
+    shape-outside: var(--shape-hexagon); }
+  :root .shape-outside-heptagon {
+    -webkit-shape-outside: var(--shape-heptagon);
+    -ms-shape-outside: var(--shape-heptagon);
+    -moz-shape-outside: var(--shape-heptagon);
+    -o-shape-outside: var(--shape-heptagon);
+    shape-outside: var(--shape-heptagon); }
+  :root .shape-outside-octagon {
+    -webkit-shape-outside: var(--shape-octagon);
+    -ms-shape-outside: var(--shape-octagon);
+    -moz-shape-outside: var(--shape-octagon);
+    -o-shape-outside: var(--shape-octagon);
+    shape-outside: var(--shape-octagon); }
+  :root .shape-outside-nonagon {
+    -webkit-shape-outside: var(--shape-nonagon);
+    -ms-shape-outside: var(--shape-nonagon);
+    -moz-shape-outside: var(--shape-nonagon);
+    -o-shape-outside: var(--shape-nonagon);
+    shape-outside: var(--shape-nonagon); }
+  :root .shape-outside-decagon {
+    -webkit-shape-outside: var(--shape-decagon);
+    -ms-shape-outside: var(--shape-decagon);
+    -moz-shape-outside: var(--shape-decagon);
+    -o-shape-outside: var(--shape-decagon);
+    shape-outside: var(--shape-decagon); }
+  :root .shape-outside-bevel {
+    -webkit-shape-outside: var(--shape-bevel);
+    -ms-shape-outside: var(--shape-bevel);
+    -moz-shape-outside: var(--shape-bevel);
+    -o-shape-outside: var(--shape-bevel);
+    shape-outside: var(--shape-bevel); }
+  :root .shape-outside-rabbet {
+    -webkit-shape-outside: var(--shape-rabbet);
+    -ms-shape-outside: var(--shape-rabbet);
+    -moz-shape-outside: var(--shape-rabbet);
+    -o-shape-outside: var(--shape-rabbet);
+    shape-outside: var(--shape-rabbet); }
+  :root .shape-outside-arrow-left {
+    -webkit-shape-outside: var(--shape-arrow-left);
+    -ms-shape-outside: var(--shape-arrow-left);
+    -moz-shape-outside: var(--shape-arrow-left);
+    -o-shape-outside: var(--shape-arrow-left);
+    shape-outside: var(--shape-arrow-left); }
+  :root .shape-outside-arrow-right {
+    -webkit-shape-outside: var(--shape-arrow-right);
+    -ms-shape-outside: var(--shape-arrow-right);
+    -moz-shape-outside: var(--shape-arrow-right);
+    -o-shape-outside: var(--shape-arrow-right);
+    shape-outside: var(--shape-arrow-right); }
+  :root .shape-outside-point-left {
+    -webkit-shape-outside: var(--shape-point-left);
+    -ms-shape-outside: var(--shape-point-left);
+    -moz-shape-outside: var(--shape-point-left);
+    -o-shape-outside: var(--shape-point-left);
+    shape-outside: var(--shape-point-left); }
+  :root .shape-outside-point-right {
+    -webkit-shape-outside: var(--shape-point-right);
+    -ms-shape-outside: var(--shape-point-right);
+    -moz-shape-outside: var(--shape-point-right);
+    -o-shape-outside: var(--shape-point-right);
+    shape-outside: var(--shape-point-right); }
+  :root .shape-outside-chevron-left {
+    -webkit-shape-outside: var(--shape-chevron-left);
+    -ms-shape-outside: var(--shape-chevron-left);
+    -moz-shape-outside: var(--shape-chevron-left);
+    -o-shape-outside: var(--shape-chevron-left);
+    shape-outside: var(--shape-chevron-left); }
+  :root .shape-outside-chevron-right {
+    -webkit-shape-outside: var(--shape-chevron-right);
+    -ms-shape-outside: var(--shape-chevron-right);
+    -moz-shape-outside: var(--shape-chevron-right);
+    -o-shape-outside: var(--shape-chevron-right);
+    shape-outside: var(--shape-chevron-right); }
+  :root .shape-outside-star {
+    -webkit-shape-outside: var(--shape-star);
+    -ms-shape-outside: var(--shape-star);
+    -moz-shape-outside: var(--shape-star);
+    -o-shape-outside: var(--shape-star);
+    shape-outside: var(--shape-star); }
+  :root .shape-outside-star-rotate-270 {
+    -webkit-shape-outside: var(--shape-star-rotate-270);
+    -ms-shape-outside: var(--shape-star-rotate-270);
+    -moz-shape-outside: var(--shape-star-rotate-270);
+    -o-shape-outside: var(--shape-star-rotate-270);
+    shape-outside: var(--shape-star-rotate-270); }
+  :root .shape-outside-star-rotate-180 {
+    -webkit-shape-outside: var(--shape-star-rotate-180);
+    -ms-shape-outside: var(--shape-star-rotate-180);
+    -moz-shape-outside: var(--shape-star-rotate-180);
+    -o-shape-outside: var(--shape-star-rotate-180);
+    shape-outside: var(--shape-star-rotate-180); }
+  :root .shape-outside-star-rotate-90 {
+    -webkit-shape-outside: var(--shape-star-rotate-90);
+    -ms-shape-outside: var(--shape-star-rotate-90);
+    -moz-shape-outside: var(--shape-star-rotate-90);
+    -o-shape-outside: var(--shape-star-rotate-90);
+    shape-outside: var(--shape-star-rotate-90); }
+  :root .shape-outside-chevron-right-rotate-270 {
+    -webkit-shape-outside: var(--shape-chevron-right-rotate-270);
+    -ms-shape-outside: var(--shape-chevron-right-rotate-270);
+    -moz-shape-outside: var(--shape-chevron-right-rotate-270);
+    -o-shape-outside: var(--shape-chevron-right-rotate-270);
+    shape-outside: var(--shape-chevron-right-rotate-270); }
+  :root .shape-outside-chevron-right-rotate-180 {
+    -webkit-shape-outside: var(--shape-chevron-right-rotate-180);
+    -ms-shape-outside: var(--shape-chevron-right-rotate-180);
+    -moz-shape-outside: var(--shape-chevron-right-rotate-180);
+    -o-shape-outside: var(--shape-chevron-right-rotate-180);
+    shape-outside: var(--shape-chevron-right-rotate-180); }
+  :root .shape-outside-chevron-right-rotate-90 {
+    -webkit-shape-outside: var(--shape-chevron-right-rotate-90);
+    -ms-shape-outside: var(--shape-chevron-right-rotate-90);
+    -moz-shape-outside: var(--shape-chevron-right-rotate-90);
+    -o-shape-outside: var(--shape-chevron-right-rotate-90);
+    shape-outside: var(--shape-chevron-right-rotate-90); }
+  :root .shape-outside-chevron-left-rotate-270 {
+    -webkit-shape-outside: var(--shape-chevron-left-rotate-270);
+    -ms-shape-outside: var(--shape-chevron-left-rotate-270);
+    -moz-shape-outside: var(--shape-chevron-left-rotate-270);
+    -o-shape-outside: var(--shape-chevron-left-rotate-270);
+    shape-outside: var(--shape-chevron-left-rotate-270); }
+  :root .shape-outside-chevron-left-rotate-180 {
+    -webkit-shape-outside: var(--shape-chevron-left-rotate-180);
+    -ms-shape-outside: var(--shape-chevron-left-rotate-180);
+    -moz-shape-outside: var(--shape-chevron-left-rotate-180);
+    -o-shape-outside: var(--shape-chevron-left-rotate-180);
+    shape-outside: var(--shape-chevron-left-rotate-180); }
+  :root .shape-outside-chevron-left-rotate-90 {
+    -webkit-shape-outside: var(--shape-chevron-left-rotate-90);
+    -ms-shape-outside: var(--shape-chevron-left-rotate-90);
+    -moz-shape-outside: var(--shape-chevron-left-rotate-90);
+    -o-shape-outside: var(--shape-chevron-left-rotate-90);
+    shape-outside: var(--shape-chevron-left-rotate-90); }
+  :root .shape-outside-point-right-rotate-270 {
+    -webkit-shape-outside: var(--shape-point-right-rotate-270);
+    -ms-shape-outside: var(--shape-point-right-rotate-270);
+    -moz-shape-outside: var(--shape-point-right-rotate-270);
+    -o-shape-outside: var(--shape-point-right-rotate-270);
+    shape-outside: var(--shape-point-right-rotate-270); }
+  :root .shape-outside-point-right-rotate-180 {
+    -webkit-shape-outside: var(--shape-point-right-rotate-180);
+    -ms-shape-outside: var(--shape-point-right-rotate-180);
+    -moz-shape-outside: var(--shape-point-right-rotate-180);
+    -o-shape-outside: var(--shape-point-right-rotate-180);
+    shape-outside: var(--shape-point-right-rotate-180); }
+  :root .shape-outside-point-right-rotate-90 {
+    -webkit-shape-outside: var(--shape-point-right-rotate-90);
+    -ms-shape-outside: var(--shape-point-right-rotate-90);
+    -moz-shape-outside: var(--shape-point-right-rotate-90);
+    -o-shape-outside: var(--shape-point-right-rotate-90);
+    shape-outside: var(--shape-point-right-rotate-90); }
+  :root .shape-outside-point-left-rotate-270 {
+    -webkit-shape-outside: var(--shape-point-left-rotate-270);
+    -ms-shape-outside: var(--shape-point-left-rotate-270);
+    -moz-shape-outside: var(--shape-point-left-rotate-270);
+    -o-shape-outside: var(--shape-point-left-rotate-270);
+    shape-outside: var(--shape-point-left-rotate-270); }
+  :root .shape-outside-point-left-rotate-180 {
+    -webkit-shape-outside: var(--shape-point-left-rotate-180);
+    -ms-shape-outside: var(--shape-point-left-rotate-180);
+    -moz-shape-outside: var(--shape-point-left-rotate-180);
+    -o-shape-outside: var(--shape-point-left-rotate-180);
+    shape-outside: var(--shape-point-left-rotate-180); }
+  :root .shape-outside-point-left-rotate-90 {
+    -webkit-shape-outside: var(--shape-point-left-rotate-90);
+    -ms-shape-outside: var(--shape-point-left-rotate-90);
+    -moz-shape-outside: var(--shape-point-left-rotate-90);
+    -o-shape-outside: var(--shape-point-left-rotate-90);
+    shape-outside: var(--shape-point-left-rotate-90); }
+  :root .shape-outside-arrow-right-rotate-270 {
+    -webkit-shape-outside: var(--shape-arrow-right-rotate-270);
+    -ms-shape-outside: var(--shape-arrow-right-rotate-270);
+    -moz-shape-outside: var(--shape-arrow-right-rotate-270);
+    -o-shape-outside: var(--shape-arrow-right-rotate-270);
+    shape-outside: var(--shape-arrow-right-rotate-270); }
+  :root .shape-outside-arrow-right-rotate-180 {
+    -webkit-shape-outside: var(--shape-arrow-right-rotate-180);
+    -ms-shape-outside: var(--shape-arrow-right-rotate-180);
+    -moz-shape-outside: var(--shape-arrow-right-rotate-180);
+    -o-shape-outside: var(--shape-arrow-right-rotate-180);
+    shape-outside: var(--shape-arrow-right-rotate-180); }
+  :root .shape-outside-arrow-right-rotate-90 {
+    -webkit-shape-outside: var(--shape-arrow-right-rotate-90);
+    -ms-shape-outside: var(--shape-arrow-right-rotate-90);
+    -moz-shape-outside: var(--shape-arrow-right-rotate-90);
+    -o-shape-outside: var(--shape-arrow-right-rotate-90);
+    shape-outside: var(--shape-arrow-right-rotate-90); }
+  :root .shape-outside-arrow-left-rotate-270 {
+    -webkit-shape-outside: var(--shape-arrow-left-rotate-270);
+    -ms-shape-outside: var(--shape-arrow-left-rotate-270);
+    -moz-shape-outside: var(--shape-arrow-left-rotate-270);
+    -o-shape-outside: var(--shape-arrow-left-rotate-270);
+    shape-outside: var(--shape-arrow-left-rotate-270); }
+  :root .shape-outside-arrow-left-rotate-180 {
+    -webkit-shape-outside: var(--shape-arrow-left-rotate-180);
+    -ms-shape-outside: var(--shape-arrow-left-rotate-180);
+    -moz-shape-outside: var(--shape-arrow-left-rotate-180);
+    -o-shape-outside: var(--shape-arrow-left-rotate-180);
+    shape-outside: var(--shape-arrow-left-rotate-180); }
+  :root .shape-outside-arrow-left-rotate-90 {
+    -webkit-shape-outside: var(--shape-arrow-left-rotate-90);
+    -ms-shape-outside: var(--shape-arrow-left-rotate-90);
+    -moz-shape-outside: var(--shape-arrow-left-rotate-90);
+    -o-shape-outside: var(--shape-arrow-left-rotate-90);
+    shape-outside: var(--shape-arrow-left-rotate-90); }
+  :root .shape-outside-rabbet-rotate-270 {
+    -webkit-shape-outside: var(--shape-rabbet-rotate-270);
+    -ms-shape-outside: var(--shape-rabbet-rotate-270);
+    -moz-shape-outside: var(--shape-rabbet-rotate-270);
+    -o-shape-outside: var(--shape-rabbet-rotate-270);
+    shape-outside: var(--shape-rabbet-rotate-270); }
+  :root .shape-outside-rabbet-rotate-180 {
+    -webkit-shape-outside: var(--shape-rabbet-rotate-180);
+    -ms-shape-outside: var(--shape-rabbet-rotate-180);
+    -moz-shape-outside: var(--shape-rabbet-rotate-180);
+    -o-shape-outside: var(--shape-rabbet-rotate-180);
+    shape-outside: var(--shape-rabbet-rotate-180); }
+  :root .shape-outside-rabbet-rotate-90 {
+    -webkit-shape-outside: var(--shape-rabbet-rotate-90);
+    -ms-shape-outside: var(--shape-rabbet-rotate-90);
+    -moz-shape-outside: var(--shape-rabbet-rotate-90);
+    -o-shape-outside: var(--shape-rabbet-rotate-90);
+    shape-outside: var(--shape-rabbet-rotate-90); }
+  :root .shape-outside-bevel-rotate-270 {
+    -webkit-shape-outside: var(--shape-bevel-rotate-270);
+    -ms-shape-outside: var(--shape-bevel-rotate-270);
+    -moz-shape-outside: var(--shape-bevel-rotate-270);
+    -o-shape-outside: var(--shape-bevel-rotate-270);
+    shape-outside: var(--shape-bevel-rotate-270); }
+  :root .shape-outside-bevel-rotate-180 {
+    -webkit-shape-outside: var(--shape-bevel-rotate-180);
+    -ms-shape-outside: var(--shape-bevel-rotate-180);
+    -moz-shape-outside: var(--shape-bevel-rotate-180);
+    -o-shape-outside: var(--shape-bevel-rotate-180);
+    shape-outside: var(--shape-bevel-rotate-180); }
+  :root .shape-outside-bevel-rotate-90 {
+    -webkit-shape-outside: var(--shape-bevel-rotate-90);
+    -ms-shape-outside: var(--shape-bevel-rotate-90);
+    -moz-shape-outside: var(--shape-bevel-rotate-90);
+    -o-shape-outside: var(--shape-bevel-rotate-90);
+    shape-outside: var(--shape-bevel-rotate-90); }
+  :root .shape-outside-decagon-rotate-270 {
+    -webkit-shape-outside: var(--shape-decagon-rotate-270);
+    -ms-shape-outside: var(--shape-decagon-rotate-270);
+    -moz-shape-outside: var(--shape-decagon-rotate-270);
+    -o-shape-outside: var(--shape-decagon-rotate-270);
+    shape-outside: var(--shape-decagon-rotate-270); }
+  :root .shape-outside-decagon-rotate-180 {
+    -webkit-shape-outside: var(--shape-decagon-rotate-180);
+    -ms-shape-outside: var(--shape-decagon-rotate-180);
+    -moz-shape-outside: var(--shape-decagon-rotate-180);
+    -o-shape-outside: var(--shape-decagon-rotate-180);
+    shape-outside: var(--shape-decagon-rotate-180); }
+  :root .shape-outside-decagon-rotate-90 {
+    -webkit-shape-outside: var(--shape-decagon-rotate-90);
+    -ms-shape-outside: var(--shape-decagon-rotate-90);
+    -moz-shape-outside: var(--shape-decagon-rotate-90);
+    -o-shape-outside: var(--shape-decagon-rotate-90);
+    shape-outside: var(--shape-decagon-rotate-90); }
+  :root .shape-outside-nonagon-rotate-270 {
+    -webkit-shape-outside: var(--shape-nonagon-rotate-270);
+    -ms-shape-outside: var(--shape-nonagon-rotate-270);
+    -moz-shape-outside: var(--shape-nonagon-rotate-270);
+    -o-shape-outside: var(--shape-nonagon-rotate-270);
+    shape-outside: var(--shape-nonagon-rotate-270); }
+  :root .shape-outside-nonagon-rotate-180 {
+    -webkit-shape-outside: var(--shape-nonagon-rotate-180);
+    -ms-shape-outside: var(--shape-nonagon-rotate-180);
+    -moz-shape-outside: var(--shape-nonagon-rotate-180);
+    -o-shape-outside: var(--shape-nonagon-rotate-180);
+    shape-outside: var(--shape-nonagon-rotate-180); }
+  :root .shape-outside-nonagon-rotate-90 {
+    -webkit-shape-outside: var(--shape-nonagon-rotate-90);
+    -ms-shape-outside: var(--shape-nonagon-rotate-90);
+    -moz-shape-outside: var(--shape-nonagon-rotate-90);
+    -o-shape-outside: var(--shape-nonagon-rotate-90);
+    shape-outside: var(--shape-nonagon-rotate-90); }
+  :root .shape-outside-octagon-rotate-270 {
+    -webkit-shape-outside: var(--shape-octagon-rotate-270);
+    -ms-shape-outside: var(--shape-octagon-rotate-270);
+    -moz-shape-outside: var(--shape-octagon-rotate-270);
+    -o-shape-outside: var(--shape-octagon-rotate-270);
+    shape-outside: var(--shape-octagon-rotate-270); }
+  :root .shape-outside-octagon-rotate-180 {
+    -webkit-shape-outside: var(--shape-octagon-rotate-180);
+    -ms-shape-outside: var(--shape-octagon-rotate-180);
+    -moz-shape-outside: var(--shape-octagon-rotate-180);
+    -o-shape-outside: var(--shape-octagon-rotate-180);
+    shape-outside: var(--shape-octagon-rotate-180); }
+  :root .shape-outside-octagon-rotate-90 {
+    -webkit-shape-outside: var(--shape-octagon-rotate-90);
+    -ms-shape-outside: var(--shape-octagon-rotate-90);
+    -moz-shape-outside: var(--shape-octagon-rotate-90);
+    -o-shape-outside: var(--shape-octagon-rotate-90);
+    shape-outside: var(--shape-octagon-rotate-90); }
+  :root .shape-outside-heptagon-rotate-270 {
+    -webkit-shape-outside: var(--shape-heptagon-rotate-270);
+    -ms-shape-outside: var(--shape-heptagon-rotate-270);
+    -moz-shape-outside: var(--shape-heptagon-rotate-270);
+    -o-shape-outside: var(--shape-heptagon-rotate-270);
+    shape-outside: var(--shape-heptagon-rotate-270); }
+  :root .shape-outside-heptagon-rotate-180 {
+    -webkit-shape-outside: var(--shape-heptagon-rotate-180);
+    -ms-shape-outside: var(--shape-heptagon-rotate-180);
+    -moz-shape-outside: var(--shape-heptagon-rotate-180);
+    -o-shape-outside: var(--shape-heptagon-rotate-180);
+    shape-outside: var(--shape-heptagon-rotate-180); }
+  :root .shape-outside-heptagon-rotate-90 {
+    -webkit-shape-outside: var(--shape-heptagon-rotate-90);
+    -ms-shape-outside: var(--shape-heptagon-rotate-90);
+    -moz-shape-outside: var(--shape-heptagon-rotate-90);
+    -o-shape-outside: var(--shape-heptagon-rotate-90);
+    shape-outside: var(--shape-heptagon-rotate-90); }
+  :root .shape-outside-hexagon-rotate-270 {
+    -webkit-shape-outside: var(--shape-hexagon-rotate-270);
+    -ms-shape-outside: var(--shape-hexagon-rotate-270);
+    -moz-shape-outside: var(--shape-hexagon-rotate-270);
+    -o-shape-outside: var(--shape-hexagon-rotate-270);
+    shape-outside: var(--shape-hexagon-rotate-270); }
+  :root .shape-outside-hexagon-rotate-180 {
+    -webkit-shape-outside: var(--shape-hexagon-rotate-180);
+    -ms-shape-outside: var(--shape-hexagon-rotate-180);
+    -moz-shape-outside: var(--shape-hexagon-rotate-180);
+    -o-shape-outside: var(--shape-hexagon-rotate-180);
+    shape-outside: var(--shape-hexagon-rotate-180); }
+  :root .shape-outside-hexagon-rotate-90 {
+    -webkit-shape-outside: var(--shape-hexagon-rotate-90);
+    -ms-shape-outside: var(--shape-hexagon-rotate-90);
+    -moz-shape-outside: var(--shape-hexagon-rotate-90);
+    -o-shape-outside: var(--shape-hexagon-rotate-90);
+    shape-outside: var(--shape-hexagon-rotate-90); }
+  :root .shape-outside-pentagon-rotate-270 {
+    -webkit-shape-outside: var(--shape-pentagon-rotate-270);
+    -ms-shape-outside: var(--shape-pentagon-rotate-270);
+    -moz-shape-outside: var(--shape-pentagon-rotate-270);
+    -o-shape-outside: var(--shape-pentagon-rotate-270);
+    shape-outside: var(--shape-pentagon-rotate-270); }
+  :root .shape-outside-pentagon-rotate-180 {
+    -webkit-shape-outside: var(--shape-pentagon-rotate-180);
+    -ms-shape-outside: var(--shape-pentagon-rotate-180);
+    -moz-shape-outside: var(--shape-pentagon-rotate-180);
+    -o-shape-outside: var(--shape-pentagon-rotate-180);
+    shape-outside: var(--shape-pentagon-rotate-180); }
+  :root .shape-outside-pentagon-rotate-90 {
+    -webkit-shape-outside: var(--shape-pentagon-rotate-90);
+    -ms-shape-outside: var(--shape-pentagon-rotate-90);
+    -moz-shape-outside: var(--shape-pentagon-rotate-90);
+    -o-shape-outside: var(--shape-pentagon-rotate-90);
+    shape-outside: var(--shape-pentagon-rotate-90); }
+  :root .shape-outside-rhombus-rotate-270 {
+    -webkit-shape-outside: var(--shape-rhombus-rotate-270);
+    -ms-shape-outside: var(--shape-rhombus-rotate-270);
+    -moz-shape-outside: var(--shape-rhombus-rotate-270);
+    -o-shape-outside: var(--shape-rhombus-rotate-270);
+    shape-outside: var(--shape-rhombus-rotate-270); }
+  :root .shape-outside-rhombus-rotate-180 {
+    -webkit-shape-outside: var(--shape-rhombus-rotate-180);
+    -ms-shape-outside: var(--shape-rhombus-rotate-180);
+    -moz-shape-outside: var(--shape-rhombus-rotate-180);
+    -o-shape-outside: var(--shape-rhombus-rotate-180);
+    shape-outside: var(--shape-rhombus-rotate-180); }
+  :root .shape-outside-rhombus-rotate-90 {
+    -webkit-shape-outside: var(--shape-rhombus-rotate-90);
+    -ms-shape-outside: var(--shape-rhombus-rotate-90);
+    -moz-shape-outside: var(--shape-rhombus-rotate-90);
+    -o-shape-outside: var(--shape-rhombus-rotate-90);
+    shape-outside: var(--shape-rhombus-rotate-90); }
+  :root .shape-outside-parallelogram-rotate-270 {
+    -webkit-shape-outside: var(--shape-parallelogram-rotate-270);
+    -ms-shape-outside: var(--shape-parallelogram-rotate-270);
+    -moz-shape-outside: var(--shape-parallelogram-rotate-270);
+    -o-shape-outside: var(--shape-parallelogram-rotate-270);
+    shape-outside: var(--shape-parallelogram-rotate-270); }
+  :root .shape-outside-parallelogram-rotate-180 {
+    -webkit-shape-outside: var(--shape-parallelogram-rotate-180);
+    -ms-shape-outside: var(--shape-parallelogram-rotate-180);
+    -moz-shape-outside: var(--shape-parallelogram-rotate-180);
+    -o-shape-outside: var(--shape-parallelogram-rotate-180);
+    shape-outside: var(--shape-parallelogram-rotate-180); }
+  :root .shape-outside-parallelogram-rotate-90 {
+    -webkit-shape-outside: var(--shape-parallelogram-rotate-90);
+    -ms-shape-outside: var(--shape-parallelogram-rotate-90);
+    -moz-shape-outside: var(--shape-parallelogram-rotate-90);
+    -o-shape-outside: var(--shape-parallelogram-rotate-90);
+    shape-outside: var(--shape-parallelogram-rotate-90); }
+  :root .shape-outside-trapezoid-rotate-270 {
+    -webkit-shape-outside: var(--shape-trapezoid-rotate-270);
+    -ms-shape-outside: var(--shape-trapezoid-rotate-270);
+    -moz-shape-outside: var(--shape-trapezoid-rotate-270);
+    -o-shape-outside: var(--shape-trapezoid-rotate-270);
+    shape-outside: var(--shape-trapezoid-rotate-270); }
+  :root .shape-outside-trapezoid-rotate-180 {
+    -webkit-shape-outside: var(--shape-trapezoid-rotate-180);
+    -ms-shape-outside: var(--shape-trapezoid-rotate-180);
+    -moz-shape-outside: var(--shape-trapezoid-rotate-180);
+    -o-shape-outside: var(--shape-trapezoid-rotate-180);
+    shape-outside: var(--shape-trapezoid-rotate-180); }
+  :root .shape-outside-trapezoid-rotate-90 {
+    -webkit-shape-outside: var(--shape-trapezoid-rotate-90);
+    -ms-shape-outside: var(--shape-trapezoid-rotate-90);
+    -moz-shape-outside: var(--shape-trapezoid-rotate-90);
+    -o-shape-outside: var(--shape-trapezoid-rotate-90);
+    shape-outside: var(--shape-trapezoid-rotate-90); }
+  :root .shape-outside-triangle-orthogonal-rotate-270 {
+    -webkit-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
+    -ms-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
+    -moz-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
+    -o-shape-outside: var(--shape-triangle-orthogonal-rotate-270);
+    shape-outside: var(--shape-triangle-orthogonal-rotate-270); }
+  :root .shape-outside-triangle-orthogonal-rotate-180 {
+    -webkit-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
+    -ms-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
+    -moz-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
+    -o-shape-outside: var(--shape-triangle-orthogonal-rotate-180);
+    shape-outside: var(--shape-triangle-orthogonal-rotate-180); }
+  :root .shape-outside-triangle-orthogonal-rotate-90 {
+    -webkit-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
+    -ms-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
+    -moz-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
+    -o-shape-outside: var(--shape-triangle-orthogonal-rotate-90);
+    shape-outside: var(--shape-triangle-orthogonal-rotate-90); }
+  :root .shape-outside-triangle-rotate-270 {
+    -webkit-shape-outside: var(--shape-triangle-rotate-270);
+    -ms-shape-outside: var(--shape-triangle-rotate-270);
+    -moz-shape-outside: var(--shape-triangle-rotate-270);
+    -o-shape-outside: var(--shape-triangle-rotate-270);
+    shape-outside: var(--shape-triangle-rotate-270); }
+  :root .shape-outside-triangle-rotate-180 {
+    -webkit-shape-outside: var(--shape-triangle-rotate-180);
+    -ms-shape-outside: var(--shape-triangle-rotate-180);
+    -moz-shape-outside: var(--shape-triangle-rotate-180);
+    -o-shape-outside: var(--shape-triangle-rotate-180);
+    shape-outside: var(--shape-triangle-rotate-180); }
+  :root .shape-outside-triangle-rotate-90 {
+    -webkit-shape-outside: var(--shape-triangle-rotate-90);
+    -ms-shape-outside: var(--shape-triangle-rotate-90);
+    -moz-shape-outside: var(--shape-triangle-rotate-90);
+    -o-shape-outside: var(--shape-triangle-rotate-90);
+    shape-outside: var(--shape-triangle-rotate-90); }
