@@ -12,8 +12,8 @@
 @import 'functions/cos';
 @import 'functions/sin';
 @import 'functions/tan';
-@import 'functions/rotate';
-@import 'functions/rotate-path';
+@import 'functions/point-rotate';
+@import 'functions/path-rotate';
 
 // Mixins
 @import 'mixins/vendor-prefix';

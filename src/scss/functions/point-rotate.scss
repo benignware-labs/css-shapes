@@ -1,4 +1,4 @@
-@function rotate($x, $y, $angle: 45deg, $origin: (50%, 50%)) {
+@function rotate($x: 0, $y: 0, $angle: 0, $origin: (50%, 50%)) {
   $cx: nth($origin, 1);
   $cy: nth($origin, 2);
   $radians: rad($angle);
