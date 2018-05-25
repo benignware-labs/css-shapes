@@ -27,7 +27,7 @@ $rotated-shapes: ();
   @if str-contains($value, ('polygon')...) {
     @each $deg in $shape-rotate-steps {
       $unitless: $deg / ($deg * 0 + 1);
-      $rotated-path: rotate-path($value, $deg, $shape-rotate-origin);
+      $rotated-path: path-rotate($value, $deg, $shape-rotate-origin);
       $rotated-shapes: map-merge((
         '#{$name}-rotate-#{$unitless}': $rotated-path
       ), $rotated-shapes);
